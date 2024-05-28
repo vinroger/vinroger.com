@@ -79,7 +79,7 @@ function NavItemRenderer({
         </div>
       }
       onClick={() => {
-        router.push(`/${123}/${itemName.toLowerCase()}`);
+        router.push(`/theprojectid/${itemName.toLowerCase()}`);
       }}
       itemKey={itemName.toLowerCase()}
     />
@@ -109,7 +109,7 @@ export function Navbar() {
         <p>Singtel POC</p>
       </a>
       <p className="mt-4 ml-4 text-sm font-semibold text-neutral-500">
-        {ellipsisString('Test Project', 20).toUpperCase()}
+        {ellipsisString('My LuisGPT Project', 20).toUpperCase()}
       </p>
       <NavigationMenu className="flex-col items-start justify-between flex-1 w-full max-w-full px-3 mt-3 max-h-fit">
         <div className="flex flex-col w-full list-none">
