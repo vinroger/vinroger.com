@@ -2,7 +2,7 @@
 
 import { Navbar } from '@/components/navbar';
 
-const NAVBAR_WIDTH = '220px';
+const NAVBAR_WIDTH = '250px';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div style={{ width: NAVBAR_WIDTH }}>
         <Navbar />
       </div>
-      <div className="flex-1 overflow-scroll bg-neutral-50">{children}</div>
+      <div className="flex-1 overflow-scroll ">{children}</div>
     </div>
   );
 }

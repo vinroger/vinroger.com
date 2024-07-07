@@ -11,6 +11,11 @@ import {
   MonitorDown,
   FlaskConical,
   MessageSquareMore,
+  Telescope,
+  FolderGit2,
+  GraduationCap,
+  BriefcaseBusiness,
+  BookOpenText,
 } from 'lucide-react';
 import {
   NavigationMenu,
@@ -41,7 +46,9 @@ function NavItem({
     <NavigationMenuLink
       className={cn(
         navigationMenuTriggerStyle(),
-        'w-full justify-start items-center cursor-pointer font-normal'
+        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-500 text-sm mb-0.5 p-3',
+        isActive &&
+          'text-neutral-800 border-neutral-300 border-[0.5px] shadow-sm'
       )}
       onClick={onClick}
       active={isActive}
@@ -75,7 +82,7 @@ function NavItemRenderer({
           )}
         >
           {icon}
-          {toTitleCase(itemName)}
+          <p className="ml-2">{toTitleCase(itemName)}</p>
         </div>
       }
       onClick={() => {
@@ -88,12 +95,24 @@ function NavItemRenderer({
 
 const navItems = [
   {
-    name: 'knowledge-base',
-    icon: <Database strokeWidth="2.8px" className={'mr-2 w-3.5 '} />,
+    name: 'Explore',
+    icon: <Telescope strokeWidth="1.5px" className={'mr-2 w-5 '} />,
   },
   {
-    name: 'experiment',
-    icon: <FlaskConical className={'mr-2 w-3.5 '} />,
+    name: 'Education',
+    icon: <GraduationCap strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+  },
+  {
+    name: 'Experience',
+    icon: <BriefcaseBusiness strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+  },
+  {
+    name: 'Projects',
+    icon: <FolderGit2 strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+  },
+  {
+    name: 'Blog',
+    icon: <BookOpenText strokeWidth="1.5px" className={'mr-2 w-5 '} />,
   },
 ];
 
@@ -101,17 +120,22 @@ export function Navbar() {
   const userButtonRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="flex flex-col border-neutral-300 border-e-[1px] min-h-full justify-start">
+    <div className="flex flex-col border-neutral-200 border-e-[1px] min-h-full justify-start bg-neutral-50 p-4">
       <a
-        className="flex flex-row items-center p-5 ml-2 space-x-3 text-xl font-bold cursor-pointer hover:opacity-50"
+        className="flex flex-row items-center cursor-pointer hover:opacity-50 mb-10 p-2"
         href={'/workspace'}
       >
-        <p>Singtel POC</p>
+        <img
+          src="/personalphoto.jpeg"
+          className="w-10 rounded-full mr-2"
+          alt=""
+        />
+        <div className="flex flex-col">
+          <p className="text-sm font-semibold ">Vincentius Roger</p>
+          <p className="text-neutral-500 text-xs">Full-stack & GenAI Dev</p>
+        </div>
       </a>
-      <p className="mt-4 ml-4 text-sm font-semibold text-neutral-500">
-        {ellipsisString('My LuisGPT Project', 20).toUpperCase()}
-      </p>
-      <NavigationMenu className="flex-col items-start justify-between flex-1 w-full max-w-full px-3 mt-3 max-h-fit">
+      <NavigationMenu className="flex-col items-start justify-between flex-1 w-full max-w-full mt-3 max-h-fit">
         <div className="flex flex-col w-full list-none">
           {navItems.map((item) => (
             <NavItemRenderer
