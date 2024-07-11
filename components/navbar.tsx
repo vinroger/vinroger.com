@@ -40,15 +40,15 @@ function NavItem({
   const pathname = usePathname();
 
   const isActive =
-    !!pathname && pathname.split('/')[2] === itemKey.toLowerCase();
+    !!pathname && pathname.split('/')[1] === itemKey.toLowerCase();
 
   return (
     <NavigationMenuLink
       className={cn(
         navigationMenuTriggerStyle(),
-        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-500 text-sm mb-0.5 p-3',
+        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-400 text-sm mb-0.5 p-3',
         isActive &&
-          'text-neutral-800 border-neutral-300 border-[0.5px] shadow-sm'
+          'text-black border-neutral-300 border-[0.5px] shadow-sm font-semibold'
       )}
       onClick={onClick}
       active={isActive}
@@ -78,7 +78,7 @@ function NavItemRenderer({
         <div
           className={cn(
             'flex flex-row items-center',
-            isActive && 'font-bold text-[14.5px]'
+            isActive && ' text-[14.5px]'
           )}
         >
           {icon}
@@ -86,7 +86,7 @@ function NavItemRenderer({
         </div>
       }
       onClick={() => {
-        router.push(`/theprojectid/${itemName.toLowerCase()}`);
+        router.push(`/${itemName.toLowerCase()}`);
       }}
       itemKey={itemName.toLowerCase()}
     />
@@ -147,7 +147,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="flex flex-col max-w-full w-full justify-center items-center">
+        {/* <div className="flex flex-col max-w-full w-full justify-center items-center">
           <div className="flex flex-row items-center w-full space-x-2 min-h-[60px]">
             <div
               className="flex flex-col max-w-full overflow-scroll cursor-pointer hover:opacity-50 "
@@ -162,7 +162,7 @@ export function Navbar() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </NavigationMenu>
     </div>
   );
