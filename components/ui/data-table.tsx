@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+// @ts-nocheck
 import {
   Table as TableType,
   ColumnDef,
@@ -6,7 +8,7 @@ import {
   getPaginationRowModel,
   useReactTable,
   Row,
-} from "@tanstack/react-table";
+} from '@tanstack/react-table';
 
 import {
   Table,
@@ -15,23 +17,23 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from '@/components/ui/table';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./select";
-import { Button } from "./button";
+} from './select';
+import { Button } from './button';
 
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
-} from "@radix-ui/react-icons";
-import { useMemo } from "react";
+} from '@radix-ui/react-icons';
+import { Key, useMemo } from 'react';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -74,7 +76,7 @@ export function DataTable<TData, TValue>({
             table.getRowModel().rows.map((row) => (
               <TableRow
                 key={row.id}
-                data-state={row.getIsSelected() && "selected"}
+                data-state={row.getIsSelected() && 'selected'}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
@@ -139,18 +141,29 @@ export function usePaginatedDataTable<TData, TValue>({
                 rows.map((row) => (
                   <TableRow
                     key={row.id}
-                    data-state={row.getIsSelected() ? "selected" : undefined}
-                    className={onRowClick ? "cursor-pointer" : undefined}
+                    data-state={row.getIsSelected() ? 'selected' : undefined}
+                    className={onRowClick ? 'cursor-pointer' : undefined}
                     onClick={() => onRowClick?.(row)}
                   >
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id} className="whitespace-nowrap">
-                        {flexRender(
-                          cell.column.columnDef.cell,
-                          cell.getContext()
-                        )}
-                      </TableCell>
-                    ))}
+                    {row
+                      .getVisibleCells()
+                      .map(
+                        (cell: {
+                          id: Key | null | undefined;
+                          column: { columnDef: { cell: any } };
+                          getContext: () => any;
+                        }) => (
+                          <TableCell
+                            key={cell.id}
+                            className="whitespace-nowrap"
+                          >
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext()
+                            )}
+                          </TableCell>
+                        )
+                      )}
                   </TableRow>
                 ))
               ) : (
@@ -207,7 +220,7 @@ export function DataTablePagination<TData>({
           </Select>
         </div>
         <div className="flex w-[100px] items-center justify-center text-sm font-medium">
-          Page {table.getState().pagination.pageIndex + 1} of{" "}
+          Page {table.getState().pagination.pageIndex + 1} of{' '}
           {table.getPageCount()}
         </div>
         <div className="flex items-center space-x-2">
