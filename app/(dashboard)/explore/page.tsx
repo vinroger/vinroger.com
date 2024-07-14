@@ -14,6 +14,7 @@ import React from 'react';
 import Link from 'next/link';
 import Experience from './experience';
 import FeaturedProjects from './featuredProject';
+import dynamic from 'next/dynamic';
 
 const IconButton = ({
   onClick,
