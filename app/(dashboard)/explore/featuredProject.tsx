@@ -23,7 +23,7 @@ function ProjectCard({ title, description, imageSrc, link }: ProjectCardProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden">
         <Image
           src={imageSrc}
           alt={title}
@@ -36,7 +36,7 @@ function ProjectCard({ title, description, imageSrc, link }: ProjectCardProps) {
         <h3 className="font-semibold text-lg">{title}</h3>
         <p className="text-gray-600 text-sm mt-1">{description}</p>
         <div
-          className={`absolute right-4 bottom-4 transition-opacity duration-300 ${
+          className={`absolute right-4 bottom-4 transition-opacity duration-300 text-neutral-500 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -51,25 +51,31 @@ function FeaturedProjects() {
   return (
     <div className="mt-10">
       <p className="font-semibold text-lg mb-4">Featured Projects</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
         <ProjectCard
-          title="Billify"
-          description="A digital invoice template for designers."
-          imageSrc="/singtel.png"
-          link="https://example.com/billify"
+          title="UImagine.io"
+          description="Transform ideas to design and code in seconds."
+          imageSrc="/uimagine.png"
+          link="/.png"
         />
         <ProjectCard
-          title="Billify"
-          description="A digital invoice template for designers."
-          imageSrc="/singtel.png"
-          link="https://example.com/billify"
+          title="OneLLM.co"
+          description="End-to-end no code LLM fine-tuning studio."
+          imageSrc="/onellm.png"
+          link="/.png"
+        />
+        {/* <ProjectCard
+          title="Project 3"
+          description="Another amazing project description."
+          imageSrc="/datature.png"
+          link="https://example.com/project3"
         />
         <ProjectCard
-          title="Supply"
-          description="Lemonsqueezy-powered digital store template."
-          imageSrc="/terrascope.png"
-          link="https://example.com/supply"
-        />
+          title="Project 4"
+          description="Yet another cool project description."
+          imageSrc="/project4.png"
+          link="https://example.com/project4"
+        /> */}
       </div>
     </div>
   );
