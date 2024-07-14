@@ -123,7 +123,7 @@ export function Navbar() {
     <div className="flex flex-col border-neutral-200 border-e-[1px] min-h-full justify-start bg-neutral-50 p-4">
       <a
         className="flex flex-row items-center cursor-pointer hover:opacity-50 mb-10 p-2"
-        href={'/workspace'}
+        href={'/explore'}
       >
         <img
           src="/personalphoto.jpeg"
