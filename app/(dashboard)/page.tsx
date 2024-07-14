@@ -1,7 +1,5 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 
-function Index() {
-  return <div>Index</div>;
+export default function Index() {
+  redirect('/explore');
 }
-
-export default Index;
