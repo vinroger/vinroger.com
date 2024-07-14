@@ -56,13 +56,13 @@ function FeaturedProjects() {
           title="UImagine.io"
           description="Transform ideas to design and code in seconds."
           imageSrc="/uimagine.png"
-          link="/.png"
+          link="https://uimagine.io"
         />
         <ProjectCard
           title="OneLLM.co"
           description="End-to-end no code LLM fine-tuning studio."
           imageSrc="/onellm.png"
-          link="/.png"
+          link="https://onellm.co"
         />
         {/* <ProjectCard
           title="Project 3"
