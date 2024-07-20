@@ -59,18 +59,31 @@ function Details() {
           </div>
         </div>
         <div className="flex-grow">
-          <h3 className="text-xl font-semibold text-neutral-800 mb-2">
-            Singapore University of Technology and Design (SUTD)
-          </h3>
-          <p className="text-neutral-700 font-medium mb-1">
-            Bachelor of Engineering in Computer Science and Design
-          </p>
-          <p className="text-neutral-600 mb-1">September 2021 - May 2025</p>
-          <p className="text-neutral-600 mb-1">CGPA: 4.96/5.00</p>
-          <p className="text-neutral-600 mb-1">
-            Awards: ASEAN UG Scholarship, Honours List 2021/2022, Honours List
-            2022/2023
-          </p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="text-xl font-semibold text-neutral-800 mb-2">
+                Singapore University of Technology and Design (SUTD)
+              </h3>
+              <p className="text-neutral-700 font-medium mb-1">
+                Bachelor of Engineering in Computer Science and Design
+              </p>
+              <p className="text-neutral-600 mb-1">September 2021 - May 2025</p>
+              <p className="text-neutral-600 mb-1">CGPA: 4.96/5.00</p>
+              <p className="text-neutral-600 mb-1">
+                Awards: ASEAN UG Scholarship, Honours List 2021/2022, Honours
+                List 2022/2023
+              </p>
+            </div>
+            <div className="flex-shrink-0 w-20 h-20 relative ml-4">
+              <Image
+                src="/showcase/sutdlogo.png"
+                alt="SUTD logo"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
           <div className="flex flex-row overflow-x-auto max-w-full space-x-5 mt-7 pb-2">
             {[
               '/showcase/clickbeat.png',
@@ -99,23 +112,36 @@ function Details() {
           </div>
         </div>
         <div className="flex-grow">
-          <h3 className="text-xl font-semibold text-neutral-800 mb-2">
-            The University of British Columbia (UBC)
-          </h3>
-          <p className="text-neutral-700 font-medium mb-1">
-            Exchange Program - Vancouver, Canada
-          </p>
-          <p className="text-neutral-600 mb-1">
-            September 2023 - December 2023
-          </p>
-          <p className="text-neutral-600 mb-1">Semester GPA: 3.93/4</p>
-          <p className="text-neutral-600 mb-1">
-            Awards: Canada-Seed ASEAN Scholarship, $10,200 in stipend
-          </p>
-          <p className="text-neutral-600">
-            Courses: Applied Machine Learning, Machine Learning and Data Mining,
-            Networks, Cybersecurity
-          </p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="text-xl font-semibold text-neutral-800 mb-2">
+                The University of British Columbia (UBC)
+              </h3>
+              <p className="text-neutral-700 font-medium mb-1">
+                Exchange Program - Vancouver, Canada
+              </p>
+              <p className="text-neutral-600 mb-1">
+                September 2023 - December 2023
+              </p>
+              <p className="text-neutral-600 mb-1">Semester GPA: 3.93/4</p>
+              <p className="text-neutral-600 mb-1">
+                Awards: Canada-Seed ASEAN Scholarship, $10,200 in stipend
+              </p>
+              <p className="text-neutral-600">
+                Courses: Applied Machine Learning, Machine Learning and Data
+                Mining, Networks, Cybersecurity
+              </p>
+            </div>
+            <div className="flex-shrink-0 w-20 h-20 relative ml-4">
+              <Image
+                src="/showcase/ubclogo.png"
+                alt="UBC logo"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
           <div className="flex flex-row overflow-x-auto max-w-full space-x-5 mt-7 pb-2">
             {[
               '/showcase/canada-lyn.png',
