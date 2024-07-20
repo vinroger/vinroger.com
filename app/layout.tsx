@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description:
     'Full-stack and GenAI Developer. Computer Science at Singapore University of Technology and Design (SUTD)',
   icons: {
-    icon: '/favicon-roger.ico', // /public/favicon-roger.ico
-    shortcut: '/favicon-roger.ico', // /public/favicon-roger.ico
+    icon: '/favicon.ico', // /public/favicon-roger.ico
+    shortcut: '/favicon.ico', // /public/favicon-roger.ico
     apple: '/apple-touch-icon.png', // /public/apple-touch-icon.png
     other: {
       rel: 'apple-touch-icon-precomposed',

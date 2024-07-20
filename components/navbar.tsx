@@ -1,16 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
 'use client';
 import { useRouter, usePathname } from 'next/navigation';
 import {
-  Boxes,
-  Database,
-  AreaChart,
-  MonitorDown,
-  FlaskConical,
-  MessageSquareMore,
   Telescope,
   FolderGit2,
   GraduationCap,
@@ -23,19 +13,19 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
-import { useRef } from 'react';
-import { Separator } from './ui/separator';
-import { ellipsisString, toTitleCase } from '@/utils/functions/string';
+import { useEffect, useRef } from 'react';
+import { toTitleCase } from '@/utils/functions/string';
 
 function NavItem({
   item,
   onClick,
   itemKey,
+  itemHotkey,
 }: {
   item: React.ReactNode;
   onClick: () => void;
   itemKey: string;
+  itemHotkey: string;
 }) {
   const pathname = usePathname();
 
@@ -46,7 +36,7 @@ function NavItem({
     <NavigationMenuLink
       className={cn(
         navigationMenuTriggerStyle(),
-        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-400 text-sm mb-0.5 p-3',
+        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-400 text-sm mb-1 p-3',
         isActive &&
           'text-black border-neutral-300 border-[0.5px] shadow-sm font-semibold'
       )}
@@ -54,6 +44,9 @@ function NavItem({
       active={isActive}
     >
       {item}
+      <span className="ml-auto text-xs text-neutral-500 border-[1px] p-1 rounded-sm px-1.5 shadow-xs w-6 flex justify-center">
+        {itemHotkey}
+      </span>
     </NavigationMenuLink>
   );
 }
@@ -61,10 +54,12 @@ function NavItem({
 function NavItemRenderer({
   itemName,
   itemKey,
+  itemHotkey,
   icon,
 }: {
   itemKey: string;
   itemName: string;
+  itemHotkey: string;
   icon: React.ReactNode;
 }) {
   const router = useRouter();
@@ -89,6 +84,7 @@ function NavItemRenderer({
         router.push(`/${itemName.toLowerCase()}`);
       }}
       itemKey={itemName.toLowerCase()}
+      itemHotkey={itemHotkey}
     />
   );
 }
@@ -97,27 +93,52 @@ const navItems = [
   {
     name: 'Explore',
     icon: <Telescope strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+    hotkey: 'W',
   },
   {
     name: 'Education',
     icon: <GraduationCap strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+    hotkey: 'A',
   },
   {
     name: 'Experience',
     icon: <BriefcaseBusiness strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+    hotkey: 'S',
   },
   {
     name: 'Projects',
     icon: <FolderGit2 strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+    hotkey: 'D',
   },
   {
     name: 'Blog',
     icon: <BookOpenText strokeWidth="1.5px" className={'mr-2 w-5 '} />,
+    hotkey: 'R',
   },
 ];
 
 export function Navbar() {
   const userButtonRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleKeyPress = (event: KeyboardEvent) => {
+    const pressedKey = event.key.toLowerCase();
+    // console.log(pressedKey, navIt);
+    const matchingNavItem = navItems.find(
+      (item) => item.hotkey.toLowerCase() === pressedKey.toLowerCase()
+    );
+    if (matchingNavItem) {
+      router.push(`/${matchingNavItem.name.toLowerCase()}`);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
 
   return (
     <div className="flex flex-col border-neutral-200 border-e-[1px] min-h-full justify-start bg-neutral-50 p-4">
@@ -140,29 +161,13 @@ export function Navbar() {
           {navItems.map((item) => (
             <NavItemRenderer
               key={item.name}
+              itemHotkey={item.hotkey}
               itemKey={item.name}
               itemName={item.name}
               icon={item.icon}
             />
           ))}
         </div>
-
-        {/* <div className="flex flex-col max-w-full w-full justify-center items-center">
-          <div className="flex flex-row items-center w-full space-x-2 min-h-[60px]">
-            <div
-              className="flex flex-col max-w-full overflow-scroll cursor-pointer hover:opacity-50 "
-              onClick={() => {
-                (
-                  document.querySelector('.cl-userButtonTrigger') as any
-                )?.click();
-              }}
-            >
-              <p className="overflow-scroll text-sm font-semibold text-wrap">
-                {ellipsisString('Your Name' ?? '', 20)}
-              </p>
-            </div>
-          </div>
-        </div> */}
       </NavigationMenu>
     </div>
   );
