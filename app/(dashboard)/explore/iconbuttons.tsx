@@ -67,7 +67,7 @@ function IconButtons() {
   return (
     <div className="flex flex-row items-start w-full mt-5 space-x-3">
       <IconButton
-        onClick={() => window.open('/education')}
+        onClick={() => window.location.replace('/education')}
         icon={
           <GraduationCap
             className="mr-2 text-neutral-500 h-5"

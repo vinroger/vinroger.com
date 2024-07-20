@@ -52,7 +52,7 @@ function Details() {
         </div>
       </div> */}
 
-      <div className="flex items-start space-x-6 rounded-lg p-6 transition-all mb-10 mt-10">
+      <div className="flex items-start space-x-6 rounded-lg p-6 transition-all mb-10 mt-5">
         <div className="flex-shrink-0">
           <div className="rounded-lg bg-neutral-100 p-2 w-fit">
             <GraduationCap className="text-neutral-600" />
