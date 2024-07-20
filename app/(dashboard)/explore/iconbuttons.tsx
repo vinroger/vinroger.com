@@ -6,6 +6,7 @@ import useCopyToClipboard from '@/utils/hooks/useCopyPaste';
 import { GraduationCap, Copy, Check, ArrowUpRight } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const IconButton = ({
   onClick,
@@ -64,10 +65,12 @@ function IconButtons() {
     copy(email);
   };
 
+  const router = useRouter();
+
   return (
     <div className="flex flex-row items-start w-full mt-5 space-x-3">
       <IconButton
-        onClick={() => window.location.replace('/education')}
+        onClick={() => router.push('/education')}
         icon={
           <GraduationCap
             className="mr-2 text-neutral-500 h-5"
