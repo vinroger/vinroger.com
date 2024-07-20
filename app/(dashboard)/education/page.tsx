@@ -3,6 +3,7 @@
 import { RefreshCw } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'sonner';
+import Details from './details';
 
 const quotes = [
   {
@@ -238,7 +239,7 @@ function Index() {
           Education
         </h1>
         <div
-          className="flex flex-col text-neutral-500 relative text-md"
+          className="flex flex-col text-neutral-500 relative text-md mb-5"
           onMouseEnter={() => setShowRefresh(true)}
           onMouseLeave={() => setShowRefresh(false)}
         >
@@ -254,6 +255,7 @@ function Index() {
             </button>
           )}
         </div>
+        <Details />
       </div>
     </div>
   );
