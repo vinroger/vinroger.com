@@ -62,19 +62,19 @@ function Experience() {
             companyName="Singtel"
             experience="Full-stack Engineer Intern (Management Associate Program)"
             imageSrc="/singtel.png"
-            link="/experience/singtel"
+            link="/experience"
           />
           <ExperienceRow
             companyName="Terrascope"
             experience="Full-stack Engineer Intern"
             imageSrc="/terrascope.png"
-            link="/experience/terrascope"
+            link="/experience"
           />
           <ExperienceRow
             companyName="Datature"
             experience="Front-end Engineer Intern"
             imageSrc="/datature.png"
-            link="/experience/datature"
+            link="/experience"
           />
         </div>
       </div>
