@@ -59,7 +59,7 @@ const IconButton = ({
 function Index() {
   return (
     <div className="flex justify-center items-center flex-col pt-[90px]">
-      <div className="max-w-[850px] flex w-full flex-col pb-[100px]">
+      <div className="max-w-[850px] flex w-full flex-col pb-[100px] px-5 lg:px-0">
         <p className="font-semibold text-[40px] tracking-tight">
           Hello, I am Roger.
         </p>

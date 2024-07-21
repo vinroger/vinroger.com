@@ -32,7 +32,9 @@ function NavItem({
   const pathname = usePathname();
 
   const isActive =
-    !!pathname && pathname.split('/')[1] === itemKey.toLowerCase();
+    !!pathname &&
+    (pathname.split('/')[1] === itemKey.toLowerCase() ||
+      pathname.split('/')[1] === (overrideKey ?? itemKey).toLowerCase());
 
   return (
     <NavigationMenuLink
@@ -135,7 +137,8 @@ export function Navbar() {
       (item) => item.hotkey.toLowerCase() === pressedKey.toLowerCase()
     );
     if (matchingNavItem) {
-      router.push(`/${matchingNavItem.name.toLowerCase()}`);
+      const toUse = matchingNavItem.overrideKey ?? matchingNavItem.name;
+      router.push(`/${toUse.toLowerCase()}`);
     }
   };
 
