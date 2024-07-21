@@ -5,6 +5,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'] });
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Vincentius Roger Kuswara',
@@ -41,6 +42,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }
