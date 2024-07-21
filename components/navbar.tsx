@@ -21,11 +21,13 @@ function NavItem({
   onClick,
   itemKey,
   itemHotkey,
+  overrideKey,
 }: {
   item: React.ReactNode;
   onClick: () => void;
   itemKey: string;
   itemHotkey: string;
+  overrideKey?: string;
 }) {
   const pathname = usePathname();
 
@@ -56,11 +58,13 @@ function NavItemRenderer({
   itemKey,
   itemHotkey,
   icon,
+  overrideKey,
 }: {
   itemKey: string;
   itemName: string;
   itemHotkey: string;
   icon: React.ReactNode;
+  overrideKey?: string;
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -81,10 +85,11 @@ function NavItemRenderer({
         </div>
       }
       onClick={() => {
-        router.push(`/${itemName.toLowerCase()}`);
+        router.push(`/${(overrideKey ?? itemName).toLowerCase()}`);
       }}
       itemKey={itemName.toLowerCase()}
       itemHotkey={itemHotkey}
+      overrideKey={overrideKey}
     />
   );
 }
@@ -101,9 +106,10 @@ const navItems = [
     hotkey: 'A',
   },
   {
-    name: 'Experience',
+    name: 'Work Experience',
     icon: <BriefcaseBusiness strokeWidth="1.5px" className={'mr-2 w-5 '} />,
     hotkey: 'S',
+    overrideKey: 'experience',
   },
   {
     name: 'Projects',
@@ -165,6 +171,7 @@ export function Navbar() {
               itemKey={item.name}
               itemName={item.name}
               icon={item.icon}
+              overrideKey={item.overrideKey}
             />
           ))}
         </div>
