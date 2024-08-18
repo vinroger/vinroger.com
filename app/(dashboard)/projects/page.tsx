@@ -36,7 +36,7 @@ function Index() {
             title="AdSwift"
             description="Data analytics collection and platform for outdoor advertising."
             imageSrc="/projects/adswift.png"
-            link="/projects"
+            link="/projects/adswift"
             noNewTab
           />
           <ProjectCard
@@ -52,7 +52,7 @@ function Index() {
             title="The Guiding Hand"
             description="Client-Counselor portal for Gebirah Org with AI features."
             imageSrc="/projects/guidinghand2.png"
-            link="/projects"
+            link="/projects/the-guiding-hand"
             noNewTab
           />
         </div>

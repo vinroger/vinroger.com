@@ -1,3 +1,7 @@
+# **Hungrybees**
+
+<img src="/projects/hungrybees.png" alt="drawing" width="1000" className="rounded-xl"/>
+
 # **Problem**
 
 Students living in the SUTD hostel face limited food options when the canteen closes, leaving them with only a few alternatives such as Changi City Point, Tampines, and Pick and Go. Consequently, many students turn to food delivery platforms as their primary source for meals. However, these platforms often have high delivery fees and high minimum order fees, which make them less accessible for cash-strapped students who cannot afford the high delivery costs.
@@ -8,7 +12,15 @@ Additionally, SUTD students have widely varying commitments, which creates diffi
 
 Introducing HungryBees, an innovative mobile application designed to alleviate the problems associated with limited food choices and high delivery costs for SUTD students. HungryBees allows users to create custom orders and join other orders within their vicinity, promoting collaboration and cost-sharing. The app integrates with a grab group-order link, connecting users with similar food preferences and delivery locations, making it easier to split delivery fees and meet minimum order requirements.
 
-HungryBees offers a much-needed solution for SUTD students by providing an easy way to form or join group orders at any time, with access to a wide variety of food choices. This addresses the challenges of limited food options, high delivery costs, and difficulties in pooling orders due to varying commitments, making it a more convenient and cost-effective solution for SUTD hostel students.
+HungryBees offers a much-needed solution for SUTD students by providing an easy way to form or join group orders at any time, with access to a wide variety of food choices. This addresses the challenges of limited food options, high delivery costs, and difficulties in pooling orders due to varying commitments, making it a more convenient and cost-effective solution for SUTD hostel students. 
+
+<br />  
+<br />  
+
+<img src="/projects/hungrybees2.png" alt="drawing" width="1000" className="rounded-xl my-10"/>
+
+<br />  
+<br />  
 
 # **System Design and Implementation**
 
