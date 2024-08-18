@@ -31,13 +31,13 @@ export default function Error({
               Oops! This part of my portfolio is still in progress 😅
             </h1>
             <h2 className="text-neutral-700 text-md mt-[10px]">
-              I'm constantly updating and improving my portfolio. This section
-              is coming soon!
+              I&apos;m constantly updating and improving my portfolio. This
+              section is coming soon!
             </h2>
             <div className="mt-10 p-6 bg-neutral-100 rounded-lg shadow-sm">
               <p className="text-lg font-semibold mb-4">Under Construction</p>
               <p className="text-neutral-600 mb-6">
-                I'm working hard to bring you something amazing. In the
+                I&apos;m working hard to bring you something amazing. In the
                 meantime, why not explore other parts of my portfolio?
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
