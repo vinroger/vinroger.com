@@ -44,7 +44,7 @@ function Index() {
             title="Hungrybees"
             description="Connecting people to group-buy together, splitting delivery costs."
             imageSrc="/projects/hungrybees.png"
-            link="/projects"
+            link="/projects/hungrybees"
             noNewTab
           />
           <ProjectCard
