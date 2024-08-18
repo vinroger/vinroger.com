@@ -1,12 +1,6 @@
 'use client';
 import { useRouter, usePathname } from 'next/navigation';
-import {
-  Telescope,
-  FolderGit2,
-  GraduationCap,
-  BriefcaseBusiness,
-  BookOpenText,
-} from 'lucide-react';
+
 import {
   NavigationMenu,
   NavigationMenuLink,
@@ -15,6 +9,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useEffect, useRef } from 'react';
 import { toTitleCase } from '@/utils/functions/string';
+import { navItems } from './navItems';
 
 function NavItem({
   item,
@@ -60,12 +55,14 @@ function NavItemRenderer({
   itemKey,
   itemHotkey,
   icon,
+  iconClassname,
   overrideKey,
 }: {
   itemKey: string;
   itemName: string;
   itemHotkey: string;
   icon: React.ReactNode;
+  iconClassname: string;
   overrideKey?: string;
 }) {
   const router = useRouter();
@@ -82,7 +79,7 @@ function NavItemRenderer({
             isActive && ' text-[14.5px]'
           )}
         >
-          {icon}
+          <div className={iconClassname}>{icon}</div>
           <p className="ml-2">{toTitleCase(itemName)}</p>
         </div>
       }
@@ -95,35 +92,6 @@ function NavItemRenderer({
     />
   );
 }
-
-const navItems = [
-  {
-    name: 'Explore',
-    icon: <Telescope strokeWidth="1.5px" className={'mr-2 w-5 '} />,
-    hotkey: 'W',
-  },
-  {
-    name: 'Education',
-    icon: <GraduationCap strokeWidth="1.5px" className={'mr-2 w-5 '} />,
-    hotkey: 'A',
-  },
-  {
-    name: 'Work Experience',
-    icon: <BriefcaseBusiness strokeWidth="1.5px" className={'mr-2 w-5 '} />,
-    hotkey: 'S',
-    overrideKey: 'experience',
-  },
-  {
-    name: 'Projects',
-    icon: <FolderGit2 strokeWidth="1.5px" className={'mr-2 w-5 '} />,
-    hotkey: 'D',
-  },
-  {
-    name: 'Blog',
-    icon: <BookOpenText strokeWidth="1.5px" className={'mr-2 w-5 '} />,
-    hotkey: 'R',
-  },
-];
 
 export function Navbar() {
   const userButtonRef = useRef<HTMLDivElement>(null);
@@ -174,6 +142,7 @@ export function Navbar() {
               itemKey={item.name}
               itemName={item.name}
               icon={item.icon}
+              iconClassname={item.iconClassname}
               overrideKey={item.overrideKey}
             />
           ))}
