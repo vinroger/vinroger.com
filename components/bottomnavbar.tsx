@@ -31,7 +31,7 @@ function BottomNavbar() {
     <div className="relative">
       <nav
         ref={navRef}
-        className="bg-white bg-opacity-80 backdrop-blur-md shadow-lg h-20 flex items-center justify-start max-w-full overflow-scroll border-t-[1px] overflow-x-auto p-2 border-neutral-200 scrollbar-hide"
+        className="bg-white bg-opacity-90 backdrop-blur-md shadow-lg h-20 flex items-center justify-start max-w-full overflow-scroll border-t-[1px] overflow-x-auto p-2 border-neutral-200 scrollbar-hide"
         onScroll={checkScroll}
       >
         {navItems.map((item) => {
