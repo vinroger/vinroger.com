@@ -9,7 +9,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useEffect, useRef } from 'react';
 import { toTitleCase } from '@/utils/functions/string';
-import { navItems } from './navItems';
+import { navItems, navSections } from './navItems';
 
 function NavItem({
   item,
@@ -17,16 +17,19 @@ function NavItem({
   itemKey,
   itemHotkey,
   overrideKey,
+  externalLink,
 }: {
   item: React.ReactNode;
   onClick: () => void;
   itemKey: string;
   itemHotkey: string;
   overrideKey?: string;
+  externalLink?: boolean;
 }) {
   const pathname = usePathname();
 
   const isActive =
+    !externalLink &&
     !!pathname &&
     (pathname.split('/')[1] === itemKey.toLowerCase() ||
       pathname.split('/')[1] === (overrideKey ?? itemKey).toLowerCase());
@@ -43,9 +46,14 @@ function NavItem({
       active={isActive}
     >
       {item}
-      <span className="ml-auto text-xs text-neutral-500 border-[1px] p-1 rounded-sm px-1.5 shadow-xs w-6 flex justify-center">
-        {itemHotkey}
-      </span>
+      {itemHotkey && (
+        <span className="ml-auto text-xs text-neutral-500 border-[1px] p-1 rounded-sm px-1.5 shadow-xs w-6 flex justify-center">
+          {itemHotkey}
+        </span>
+      )}
+      {externalLink && (
+        <span className="ml-auto text-xs text-neutral-500">↗</span>
+      )}
     </NavigationMenuLink>
   );
 }
@@ -57,6 +65,7 @@ function NavItemRenderer({
   icon,
   iconClassname,
   overrideKey,
+  externalLink,
 }: {
   itemKey: string;
   itemName: string;
@@ -64,11 +73,20 @@ function NavItemRenderer({
   icon: React.ReactNode;
   iconClassname: string;
   overrideKey?: string;
+  externalLink?: string;
 }) {
   const router = useRouter();
   const pathname = usePathname();
   const isActive =
     !!pathname && pathname.split('/')[1] === itemKey.toLowerCase();
+
+  const handleClick = () => {
+    if (externalLink) {
+      window.open(externalLink, '_blank');
+    } else {
+      router.push(`/${(overrideKey ?? itemName).toLowerCase()}`);
+    }
+  };
 
   return (
     <NavItem
@@ -83,12 +101,11 @@ function NavItemRenderer({
           <p className="ml-2">{toTitleCase(itemName)}</p>
         </div>
       }
-      onClick={() => {
-        router.push(`/${(overrideKey ?? itemName).toLowerCase()}`);
-      }}
+      onClick={handleClick}
       itemKey={itemName.toLowerCase()}
       itemHotkey={itemHotkey}
       overrideKey={overrideKey}
+      externalLink={externalLink as any}
     />
   );
 }
@@ -100,14 +117,15 @@ export function Navbar() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleKeyPress = (event: KeyboardEvent) => {
     const pressedKey = event.key.toLowerCase();
-    // console.log(pressedKey, navIt);
-    const matchingNavItem = navItems.find(
-      (item) => item.hotkey.toLowerCase() === pressedKey.toLowerCase()
-    );
-    if (matchingNavItem) {
-      const toUse = matchingNavItem.overrideKey ?? matchingNavItem.name;
-      router.push(`/${toUse.toLowerCase()}`);
-    }
+    navSections.forEach((section: any) => {
+      const matchingNavItem = section.items.find(
+        (item: any) => item?.hotkey?.toLowerCase() === pressedKey.toLowerCase()
+      );
+      if (matchingNavItem) {
+        const toUse = matchingNavItem.overrideKey ?? matchingNavItem.name;
+        router.push(`/${toUse.toLowerCase()}`);
+      }
+    });
   };
 
   useEffect(() => {
@@ -133,20 +151,28 @@ export function Navbar() {
           <p className="text-neutral-500 text-xs">Full-stack & GenAI Dev</p>
         </div>
       </a>
-      <NavigationMenu className="flex-col items-start justify-between flex-1 w-full max-w-full mt-3 max-h-fit">
-        <div className="flex flex-col w-full list-none">
-          {navItems.map((item) => (
-            <NavItemRenderer
-              key={item.name}
-              itemHotkey={item.hotkey}
-              itemKey={item.name}
-              itemName={item.name}
-              icon={item.icon}
-              iconClassname={item.iconClassname}
-              overrideKey={item.overrideKey}
-            />
-          ))}
-        </div>
+      <NavigationMenu className="flex-col items-start justify-start flex-1 w-full max-w-full mt-3 max-h-fit">
+        {navSections.map((section: any) => (
+          <div key={section.name} className="w-full mb-6">
+            <h3 className="text-xs font-semibold text-neutral-500 mb-2">
+              {section.name}
+            </h3>
+            <div className="flex flex-col w-full list-none">
+              {section.items.map((item: any) => (
+                <NavItemRenderer
+                  key={item.name}
+                  itemHotkey={item.hotkey}
+                  itemKey={item.name}
+                  itemName={item.name}
+                  icon={item.icon}
+                  iconClassname={item.iconClassname}
+                  overrideKey={item.overrideKey}
+                  externalLink={item.externalLink}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
       </NavigationMenu>
     </div>
   );
