@@ -9,6 +9,7 @@ import {
   Linkedin,
   Youtube,
   X,
+  Github,
 } from 'lucide-react';
 export const navItems = [
   {
@@ -120,6 +121,15 @@ export const navSections = [
         iconClassname: 'mr-2 w-5',
         externalLink: 'https://www.linkedin.com/in/vincentius-roger/',
       },
+      {
+        name: 'GitHub',
+        icon: <Github strokeWidth="1.5px" />,
+        IconElement: Github,
+        // hotkey: '',
+        iconClassname: 'mr-2 w-5',
+        externalLink: 'https://github.com/vinroger',
+      },
+
       // {
       //   name: 'YouTube',
       //   icon: <Youtube strokeWidth="1.5px" />,
