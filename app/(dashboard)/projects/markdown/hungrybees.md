@@ -2,6 +2,19 @@
 
 <img src="/projects/hungrybees.png" alt="drawing" width="1000" className="rounded-xl"/>
 
+# Project Awards
+
+<img src="/projects/hungrybeeswin.png" alt="drawing" width="500" className="rounded-xl"/>
+
+<br />
+
+**Picture of team Hungrybees with our award, SUTD, May 2023**
+- 1st Place Singtel-SUTD ISP Awards 2023
+($4,000 cash award and internship offers to all team members)
+- 1st Place SUTD Computer Science Awards 2023
+- 1st Most Voted Project by Public during showcase
+
+
 # **Problem**
 
 Students living in the SUTD hostel face limited food options when the canteen closes, leaving them with only a few alternatives such as Changi City Point, Tampines, and Pick and Go. Consequently, many students turn to food delivery platforms as their primary source for meals. However, these platforms often have high delivery fees and high minimum order fees, which make them less accessible for cash-strapped students who cannot afford the high delivery costs.
