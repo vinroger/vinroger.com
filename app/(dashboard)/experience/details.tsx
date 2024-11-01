@@ -4,55 +4,98 @@ import React from 'react';
 function Details() {
   const internships = [
     {
-      company: 'Singapore Telecommunications',
+      company: 'Singtel Singapore',
       logo: '/singtel.png',
-      position: 'Full-stack Developer Intern (Management Associate Program)',
+      position:
+        'Software Developer Intern, 2024 Management Associate Program Internship (MAPi)',
       duration: 'May 2024 - August 2024',
       location: 'Singapore',
       responsibilities: [
-        'Pioneered "common-baseline", a reusable module for GenAI apps, distributed in npm and pip package.',
-        'Architected a versatile GenAI package suite (pip & npm) to standardize 10+ APIs and enforce type-safety to 30+ functions, simplifying installation, updates, and data schema consistency across 4 AI applications.',
-        'Engineered a scalable full-stack architecture using Next.js and Python, allowing migration from a centralized WebSocket approach (h2o.ai wave framework) to support 20x more concurrent users and reduce server crashes by 80%.',
-        'Developed a thread-safe, queue-based message passing system in FastAPI to support non-async library, enabling concurrent WebSocket communication and increasing performance by 10x.',
-        'Created an automated testing system using Selenium, saving developers 100+ hours per month by automating the testing and reporting process to collect KPI data (delay, LLM latency).',
+        'Pioneered Singtel GenAI SDK by initiating the development of an SDK to streamline AI application creation with reusable modules and services.',
+        'Developed two reusable packages for platform migration from a low-code environment: React (npm) package for standardized UI components and data fetching hooks, and Python (pip) package for API & WebSocket handlers, logs & feedback layer, and an injectable ML service layer.',
+        'Standardized 10+ APIs and enforced type-safety for 30+ functions across 4 AI applications.',
+        'Implemented the SDK in the corporate HR chatbot, serving 12,000 daily users, receiving commendation from the Singtel CIO for its impact.',
+        'Developed a performance-optimized wrapper to make legacy Python non-async libraries compatible with an async environment, using thread pools and thread-safe queues, achieving 20x increase in concurrent request handling capacity.',
+        'Leveraged the SDK to realize a 10x performance boost and an 80% reduction in server crashes post-platform migration.',
+        'Created an automated testing system with Selenium, saving 100+ hours monthly.',
+        'Used IaC to provision production-grade Kubernetes clusters, configuring node pools for auto-scaling, improving deployment efficiency by 30% and reducing over-provisioning by 25%.',
+        'Developed a robust data pipeline for phishing campaign monitoring using Kafka, achieving 99.99% data integrity with no data loss, handling over 100,000+ daily events.',
+        'Collaborated with the ML team for integration with Apache Spark micro-batch processing, improving processing efficiency by 30%.',
+        'Aggregated and stored key metrics leading to a 15% reduction in reported phishing incidents within three months.',
+        'Won 1st Place “Best Project” team award for the Phishing Campaign Data Pipeline.',
       ],
-      techStack:
-        'Multi-threading, Python Async, Python Event Loop, WebSocket, FastAPI, Typescript, Next.js/React.js, TailwindCSS, Azure OpenShift Container, Selenium, Bamboo CI/CD.',
+      techStack: [
+        'Apache Kafka',
+        'Spark',
+        'Multi-threading',
+        'Async/Event loop Programming',
+        'WebSocket',
+        'Docker',
+        'Kubernetes',
+        'Node.js',
+        'TailwindCSS',
+        'Python',
+        'React.js',
+        'HTML5/CSS3/JavaScript',
+        'TypeScript',
+      ],
     },
     {
-      company: 'Terrascope',
+      company: 'Terrascope, Olam Group Singapore',
       logo: '/terrascope.png',
       position: 'Full-stack Developer Intern',
-      duration: 'Jan 2024 – April 2024',
+      duration: 'Jan 2024 - April 2024',
       location: 'Singapore',
       responsibilities: [
-        'Collaborated in building Terrascope PCF, an AI-powered platform for companies to calculate, analyze, and optimize product carbon footprints across their product range.',
-        'Developed "nested dropdown with autocomplete" reusable component, contributing to Terrascope Design Library System (DLS) to standardize front-end components across 5+ products using Storybook.js.',
-        'Integrated localization to support multiple languages for the PCF dashboard, allowing users to switch languages with a single click.',
-        'Created a data pipeline integrating Linear and GitHub PR data for company development metrics (PR lifecycle time, feature ticket size, developer productivity).',
-        'Maintained data freshness and efficiency by scheduling the CRON function to run daily using AWS Lambda and AWS CloudWatch, with the database stored in AWS Redshift.',
-        'Designed & built a UI dashboard for data visualization, enabling C-suite executives to conduct SPACE analysis 50% faster, significantly improving observability of technical challenges.',
-        'Overall, reduced manual data processing time by 90% and saved 90% of the cost compared to using a third-party service.',
+        'Migrated the PCF product backend service from monolithic architecture to a modular, N-layered architecture, enhancing scalability, maintainability, and performance.',
+        'Developed and implemented role-based authorization backend services, achieving an 80% reduction in unwanted access.',
+        'Developed front-end API and integrated backend services with a machine learning microservice for AI-assisted metrics analysis, reducing user analysis time by 30%.',
+        'Developed a scalable data pipeline and designed the database schema in Amazon Redshift to process 20,000+ daily webhook events for SPACE analysis.',
+        'Implemented data validation and aggregation, enhancing data accuracy by 15%.',
+        'Implemented database indexing in AWS Redshift, reducing query times by 40%.',
+        'Developed select, nested select, and autocomplete reusable components for In-house DLS.',
       ],
-      techStack:
-        'Storybook, Express.js, Dependency Injection w/ InversifyJS, SOLID Methodology, React.js, Redux State Management, Material UI, CRON function, AWS Lambda, AWS CloudWatch, AWS RedShift.',
+      techStack: [
+        'GraphQL',
+        'TypeScript',
+        'Node.js',
+        'AWS (Lambda, CloudWatch, Redshift)',
+        'Custom data pipelines',
+        'Database Indexing',
+        'Microservices architecture',
+        'React.js',
+        'Storybook.js',
+        'Trie algorithms',
+      ],
     },
     {
-      company: 'Datature',
+      company: 'Datature Singapore',
       logo: '/datature.png',
-      position: 'Front-end Developer Intern',
-      duration: 'May 2023 – August 2023',
+      position: 'Full-stack Developer Intern',
+      duration: 'May 2023 - August 2023',
       location: 'Singapore',
       responsibilities: [
-        'Built a platform enabling users to assign images to single labels using mouse clicks and hotkeys, featuring a visually appealing vignette effect for label display.',
-        'Created a multi-step form interface for configuring external bucket (S3, GCP, Azure) connections, streamlining asset synchronization with the Datature platform.',
-        'Enhanced developer experience (DX) by refactoring the user behavior tracking script into a standardized & reusable module with custom React hooks support.',
-        'Developed confusion matrix data visualization for observing model performance after training, increasing observability for users.',
-        'Refactored 10+ react class-based components to functional-based components, creating a more modular codebase with full React hooks compatibility.',
-        'Developed an automation script to convert 700+ inline CSS styles to Tailwind CSS, enhancing developer experience and code scalability while reducing migration time by 10x.',
+        'Spearheaded the Data Sync feature, enabling asset import/export between Datature Cloud and external storage, facilitating 60% faster data transfer.',
+        'Designed backend API interfaces for integration and established secure data access and synchronization.',
+        'Created 15+ error-handling mechanisms, leading to a 40% reduction in integration setup issues.',
+        'Integrated Mixpanel with Datature platform, implementing 15+ tracking events and designing dashboards for actionable visualizations.',
+        'Developed an event-driven service to consolidate data, resulting in 50% faster insight generation.',
+        'Led the front-end development for a single-classification annotation platform, enabling users to label images 3x faster.',
+        'Integrated backend for data persistence and added multi-color CSS vignette effects for enhanced visibility.',
+        'Developed confusion matrix visualization for model performance analysis, optimizing rendering with React’s useMemo hook.',
       ],
-      techStack:
-        'React.js, Next.js Pages Router, BlueprintJS, Nivo, Mixpanel CDP, Google Compute Engine, S3 and GCP Bucket, Github Actions & SSH',
+      techStack: [
+        'MongoDB',
+        'GCP (Compute Engine, Bucket)',
+        'AWS S3',
+        'Azure Bucket',
+        'React.js',
+        'Next.js Pages Router',
+        'HTML5/CSS3/JavaScript',
+        'Blueprint.js',
+        'Nivo',
+        'Mixpanel CDP',
+      ],
     },
   ];
 
@@ -99,9 +142,20 @@ function Details() {
                   <li key={idx}>{resp}</li>
                 ))}
               </ul>
-              <div className="mt-4">
+              <div className="mt-4 max-w-full">
                 <h3 className="font-semibold mb-2">Tech Stack:</h3>
-                <p className="text-sm">{internship.techStack}</p>
+                {/* Tech Stack */}
+                <ul className="list-disc ml-5">
+                  {internship.techStack.map((tech, idx) => (
+                    <li
+                      key={idx}
+                      className="bg-primary-100 text-primary-500 text-sm rounded-lg mr-1"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                {/* <p className="text-sm">{internship.techStack}</p> */}
               </div>
             </div>
           </div>
