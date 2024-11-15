@@ -55,6 +55,14 @@ function Index() {
             link="/projects/the-guiding-hand"
             noNewTab
           />
+          <ProjectCard
+            className="col-span-1"
+            title="Cassandra DB Clone"
+            description="Implementing cassandra from scratch using Go and gRPC. (Distributed System)"
+            imageSrc="/projects/cassandra.png"
+            link="/projects/cassandra"
+            noNewTab
+          />
         </div>
       </div>
     </div>
