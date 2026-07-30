@@ -63,6 +63,14 @@ function Index() {
             link="/projects/cassandra"
             noNewTab
           />
+          <ProjectCard
+            className="col-span-1"
+            title="GitGlimpse"
+            description="RAG framework for pull request retrieval and summarization. (Information Retrieval)"
+            imageSrc="/projects/gitglimpse.png"
+            link="/projects/gitglimpse"
+            noNewTab
+          />
         </div>
       </div>
     </div>
