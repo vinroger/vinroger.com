@@ -12,7 +12,7 @@
 - [x] Light and dark modes are available in the sidebar and on mobile.
 - [x] Theme and sidebar preferences survive reloads.
 - [x] The five main routes are prefetched after the initial page loads and the browser is idle.
-- [ ] Production verification.
+- [x] Production verification.
 
 ## Files
 
@@ -32,3 +32,5 @@ A local production server recorded page-data requests for Explore, Education, Ex
 Browser checks covered expanded/collapsed navigation, preference persistence, both themes, mobile pages, image zoom and pan, Fit, Escape, focus return, and keeping navigation shortcuts inactive inside the preview. The final browser session reported no errors. Build passes.
 
 Project descriptions, original images, article screenshots, ideation drawings and report PDFs are unchanged.
+
+Published on 14 September 2026 at https://www.vinroger.com. Live checks confirmed the compact homepage, theme/sidebar controls and an image preview at 150% zoom without changing the project-page URL.
