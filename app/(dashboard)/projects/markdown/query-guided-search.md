@@ -9,6 +9,27 @@ I started this project after reading [Exa’s description of its vector database
 
 [Read the report (PDF)](/projects/query-guided-search/report.pdf) · [Code and experiments](https://github.com/rgrexplore/query-guided-search-exploration)
 
+## Early sketches
+
+Some references from my ideation scratch notes. Select a drawing to view it at full size.
+
+<div class="ideation-sketches">
+  <figure>
+    <a href="/projects/query-guided-search/ideation/original-pipeline.png" target="_blank" rel="noopener noreferrer"><img src="/projects/query-guided-search/ideation/original-pipeline.png" alt="Sketch of the original ingestion and query pipeline" width="1334" height="850" /></a>
+    <figcaption>Original pipeline</figcaption>
+  </figure>
+  <figure>
+    <a href="/projects/query-guided-search/ideation/first-bitplane-idea.png" target="_blank" rel="noopener noreferrer"><img src="/projects/query-guided-search/ideation/first-bitplane-idea.png" alt="First idea for bit routing and searching a cluster with Bitplanes" width="1342" height="902" /></a>
+    <figcaption>First Bitplane idea</figcaption>
+  </figure>
+</div>
+
+<details class="ideation-more">
+  <summary>More sketches</summary>
+  <a href="/projects/query-guided-search/ideation/branching-example.png" target="_blank" rel="noopener noreferrer"><img src="/projects/query-guided-search/ideation/branching-example.png" alt="A query and document example exploring branching" loading="lazy" /></a>
+  <a href="/projects/query-guided-search/ideation/branching-and-bit-operations.png" target="_blank" rel="noopener noreferrer"><img src="/projects/query-guided-search/ideation/branching-and-bit-operations.png" alt="Branch exploration and bit operations" loading="lazy" /></a>
+</details>
+
 ## The observation
 
 A floating-point query tells us which sign we would prefer for each document coordinate. For example, the query `[0.6, -0.2, 0.4]` prefers the binary pattern `101`. Matching a coordinate contributes its magnitude to the score; a mismatch contributes the negative of that magnitude. A mismatch on `0.6` therefore costs more than one on `0.2`.
