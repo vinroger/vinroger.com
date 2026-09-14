@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# vinroger.com
 
-## Getting Started
+Personal portfolio, project articles and research reports.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Use `npm run build` for a production build and `npm run lint` for lint checks.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Update content
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `lib/portfolio.ts` contains project card summaries and work experience.
+- `app/(dashboard)/projects/markdown/` contains the project articles.
+- `app/(dashboard)/projects/[slug]/page.tsx` renders Markdown and optional PDF previews.
+- `public/projects/query-guided-search/report.pdf` is the downloadable search report.
+- `public/resume.pdf` is the existing resume file. The resume page behavior is unchanged.
 
-## Learn More
+An article can set `title`, `description`, `image` and `report` in its Markdown frontmatter. Add its card to `lib/portfolio.ts` to include it on the project list. Set `featured: true` to include it on the home page.
 
-To learn more about Next.js, take a look at the following resources:
+The PDF has a stable public address:
+https://www.vinroger.com/projects/query-guided-search/report.pdf
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The existing Vercel project is `vinroger-com` in `vinrogers-projects`. Its production domain is `www.vinroger.com`.
 
-## Deploy on Vercel
+```sh
+npx vercel link --project vinroger-com --scope vinrogers-projects
+npx vercel
+npx vercel --prod
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Preview deployments use the project's existing deployment protection. Production project pages and reports are public. Keep `.vercel/` and local environment files out of Git.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Content sources and the update checklist are in `docs/`.
