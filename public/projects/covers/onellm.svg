@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none"><title>OneLLM</title><desc>Conversation examples feed model tuning and an evaluation checklist.</desc><rect width="800" height="400" fill="#FAFAF7"/>
+<path d="M164 157C186 78 310 52 416 68C538 38 659 118 650 221C650 302 523 348 404 328C272 359 135 277 164 157Z" fill="#E6EEF4" opacity=".68"/>
+<path d="M141 83Q213.5 81 288 84Q299 83 298 96L297 310Q298 321 285 320Q213.5 322 139 319Q128 320 129 308L130 95Q129 82 141 83Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M147 123Q199.6 124.9 248.39999999999998 123" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M147 144Q206.6 141.9 270.37 144" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M147 165Q182.9 162.9 223.05 165" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M162 114Q210.0 112 260 114Q271 114 270 126L269 145Q270 157 258 157L183 157L163 174L165 157Q150 158 150 144L151 126Q150 114 162 114Z" stroke="#405365" fill="#E6EEF4" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M183 187Q224.0 185 267 187Q278 187 277 199L276 218Q277 230 265 230L204 230L184 247L186 230Q171 231 171 217L172 199Q171 187 183 187Z" stroke="#405365" fill="#F2E9DC" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M166 133Q206.4 132.4 248 133" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M186 205Q219.8 205.3 253 205" stroke="#405365" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M316 196Q343.1 195.1 372 196" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M372 196Q364.8 190.8 361 189" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M372 196Q367.5 200.0 363 204" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M406 104Q404.1 192.1 406 284" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M393 145C391 137.2 398.85 130 406 132C413.8 131 421 139.8 419 145C420 152.8 412.5 160 406 158C398.2 159 392 150.2 393 145Z" stroke="#648DAF" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M448 104Q446.9 192.9 448 284" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M435 228C433 220.2 440.85 213 448 215C455.8 214 463 222.8 461 228C462 235.8 454.5 243 448 241C440.2 242 434 233.2 435 228Z" stroke="#648DAF" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M489 104Q486.7 191.7 489 284" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M476 184C474 176.2 481.85 169 489 171C496.8 170 504 178.8 502 184C503 191.8 495.5 199 489 197C481.2 198 475 189.2 476 184Z" stroke="#648DAF" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M517 196Q539.9 196.9 561 196" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M561 196Q557.7 194.7 550 189" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M561 196Q558.7 202.2 552 204" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M596 113Q639.5 111 685 114Q696 113 695 126L694 272Q695 283 682 282Q639.5 284 594 281Q583 282 584 270L585 125Q584 112 596 113Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610 133Q607.5 131 607 134Q618 133 617 146L616 143Q617 154 604 153Q607.5 155 608 152Q597 153 598 141L599 145Q598 132 610 133Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M602 143l5 5 8 -11" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M630 144Q653.9 143.9 678 144" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610 181Q607.5 179 607 182Q618 181 617 194L616 191Q617 202 604 201Q607.5 203 608 200Q597 201 598 189L599 193Q598 180 610 181Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M602 191l5 5 8 -11" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M630 192Q654.6 192.6 678 192" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610 229Q607.5 227 607 230Q618 229 617 242L616 239Q617 250 604 249Q607.5 251 608 248Q597 249 598 237L599 241Q598 228 610 229Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M602 239l5 5 8 -11" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M630 240Q655.7 241.7 678 240" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

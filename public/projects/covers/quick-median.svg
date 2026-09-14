@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none"><title>Quick Median</title><desc>Five number bars with the middle value, five, selected.</desc><rect width="800" height="400" fill="#FAFAF7"/>
+<path d="M164 157C186 78 310 52 416 68C538 38 659 118 650 221C650 302 523 348 404 328C272 359 135 277 164 157Z" fill="#E6EEF4" opacity=".68"/>
+<path d="M167 126Q187.5 124 210 127Q221 126 220 139L219 278Q220 289 207 288Q187.5 290 165 287Q154 288 155 276L156 138Q155 125 167 126Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="187" y="109" fill="#405365" font-family="ui-monospace,monospace" font-size="31" text-anchor="middle">9</text>
+<path d="M271 252Q291.5 250 314 253Q325 252 324 265L323 278Q324 289 311 288Q291.5 290 269 287Q258 288 259 276L260 264Q259 251 271 252Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="291" y="235" fill="#405365" font-family="ui-monospace,monospace" font-size="31" text-anchor="middle">2</text>
+<path d="M375 198Q395.5 196 418 199Q429 198 428 211L427 278Q428 289 415 288Q395.5 290 373 287Q362 288 363 276L364 210Q363 197 375 198Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="395" y="181" fill="#648DAF" font-family="ui-monospace,monospace" font-size="31" text-anchor="middle">5</text>
+<path d="M479 144Q499.5 142 522 145Q533 144 532 157L531 278Q532 289 519 288Q499.5 290 477 287Q466 288 467 276L468 156Q467 143 479 144Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="499" y="127" fill="#405365" font-family="ui-monospace,monospace" font-size="31" text-anchor="middle">8</text>
+<path d="M583 270Q603.5 268 626 271Q637 270 636 283L635 278Q636 289 623 288Q603.5 290 581 287Q570 288 571 276L572 282Q571 269 583 270Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="603" y="253" fill="#405365" font-family="ui-monospace,monospace" font-size="31" text-anchor="middle">1</text>
+<path d="M136 304Q406.2 306.2 672 304" stroke="#AAB8C2" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M363 171C361 154.8 377.4 142 395 144C414.2 143 429 160.2 427 171C428 187.2 411.0 200 395 198C375.8 199 362 181.8 363 171Z" stroke="#648DAF" fill="none" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M343 324Q395 340 446 324" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M106 133Q114.3 133.3 122 133" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M114 125Q115.2 134.2 114 141" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

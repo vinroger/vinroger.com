@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none"><title>AdSwift</title><desc>A digital advertising display, location pin and nearby signal marks.</desc><rect width="800" height="400" fill="#FAFAF7"/>
+<path d="M164 157C186 78 310 52 416 68C538 38 659 118 650 221C650 302 523 348 404 328C272 359 135 277 164 157Z" fill="#E6EEF4" opacity=".68"/>
+<path d="M99 313Q221 308 319 313M479 313Q606 308 711 313" stroke="#AAB8C2" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M165 85Q287.5 83 412 86Q423 85 422 98L421 249Q422 260 409 259Q287.5 261 163 258Q152 259 153 247L154 97Q153 84 165 85Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M158 248Q287.9 248.9 416 248" stroke="#AAB8C2" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222 260Q219.2 283.7 220 311" stroke="#405365" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M352 260Q354.9 286.9 355 311" stroke="#405365" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M187 109Q236.5 107 288 110Q299 109 298 122L297 214Q298 225 285 224Q236.5 226 185 223Q174 224 175 212L176 121Q175 108 187 109Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210 153C208 139.8 219.9 129 232 131C245.2 130 256 144.2 254 153C255 166.2 243.0 177 232 175C218.8 176 209 161.8 210 153Z" stroke="#648DAF" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M194 197Q236.9 198.4 277 197" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318 134Q358.2 133.7 399 134" stroke="#405365" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318 155Q350.4 154.4 384 155" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318 181Q354.2 179.7 393 181" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M581 278C569 261 529 218 531 180C532 117 624 105 634 170C639 209 599 259 581 278Z" stroke="#405365" fill="#FFFefa" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M564 176C562 164.6 572.55 155 583 157C594.4 156 604 168.4 602 176C603 187.4 592.5 197 583 195C571.6 196 563 183.6 564 176Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M464 122Q491 148 465 177M480 106Q523 149 480 191" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M649 105Q655.7 103.7 665 105" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M657 97Q655.4 103.4 657 113" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

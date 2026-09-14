@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none"><title>HeroUI Chat</title><desc>A conversation becomes an editable interface, drawn with loose pen lines.</desc><rect width="800" height="400" fill="#FAFAF7"/>
+<path d="M164 157C186 78 310 52 416 68C538 38 659 118 650 221C650 302 523 348 404 328C272 359 135 277 164 157Z" fill="#E6EEF4" opacity=".68"/>
+<path d="M100 124Q167.5 122 237 124Q248 124 247 136L246 214Q247 226 235 226L121 226L101 243L103 226Q88 227 88 213L89 136Q88 124 100 124Z" stroke="#405365" fill="#FFFefa" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108 150Q163.7 151.2 217 150" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108 170Q154.1 172.1 196 170" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108 190Q156.4 190.4 204 190" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260 190Q289.0 188.5 321 190" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M321 190Q315.7 186.7 310 183" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M321 190Q317.4 194.9 312 198" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M362 83Q520.5 81 681 84Q692 83 691 96L690 312Q691 323 678 322Q520.5 324 360 321Q349 322 350 310L351 95Q350 82 362 83Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350 113Q519.7 112.7 691 114" stroke="#AAB8C2" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M362.5 98C360.5 96.5 363.625 93.5 365 95.5C366.5 94.5 369.5 97.0 367.5 98C368.5 99.5 366.25 102.5 365 100.5C363.5 101.5 361.5 99.0 362.5 98Z" stroke="#AAB8C2" fill="#AAB8C2" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M375.5 98C373.5 96.5 376.625 93.5 378 95.5C379.5 94.5 382.5 97.0 380.5 98C381.5 99.5 379.25 102.5 378 100.5C376.5 101.5 374.5 99.0 375.5 98Z" stroke="#AAB8C2" fill="#AAB8C2" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M388.5 98C386.5 96.5 389.625 93.5 391 95.5C392.5 94.5 395.5 97.0 393.5 98C394.5 99.5 392.25 102.5 391 100.5C389.5 101.5 387.5 99.0 388.5 98Z" stroke="#AAB8C2" fill="#AAB8C2" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M380 129Q402.5 127 427 130Q438 129 437 142L436 293Q437 304 424 303Q402.5 305 378 302Q367 303 368 291L369 141Q368 128 380 129Z" stroke="#AAB8C2" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M383 151Q403.8 153.3 420 151" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M383 176Q397.1 173.6 416 176" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M468 131Q562.5 129 659 132Q670 131 669 144L668 183Q669 194 656 193Q562.5 195 466 192Q455 193 456 181L457 143Q456 130 468 131Z" stroke="#AAB8C2" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M468 211Q504.5 209 543 212Q554 211 553 224L552 289Q553 300 540 299Q504.5 301 466 298Q455 299 456 287L457 223Q456 210 468 211Z" stroke="#AAB8C2" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M583 211Q620.0 209 659 212Q670 211 669 224L668 289Q669 300 656 299Q620.0 301 581 298Q570 299 571 287L572 223Q571 210 583 211Z" stroke="#AAB8C2" fill="#F2E9DC" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M581 172L596 216L605 199L624 193Z" stroke="#405365" fill="#FFFefa" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698 70Q707.0 71.0 714 70" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M706 62Q704.6 68.6 706 78" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" fill="none"><title>Query-guided Search</title><desc>A sketched binary query follows a branch to a matching document.</desc><rect width="800" height="400" fill="#FAFAF7"/>
+<path d="M164 157C186 78 310 52 416 68C538 38 659 118 650 221C650 302 523 348 404 328C272 359 135 277 164 157Z" fill="#E6EEF4" opacity=".68"/>
+<path d="M109 151Q171.0 149 235 152Q246 151 245 164L244 240Q245 251 232 250Q171.0 252 107 249Q96 250 97 238L98 163Q97 150 109 151Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="171" y="213" fill="#405365" font-family="ui-monospace,monospace" font-size="36" text-anchor="middle">1011</text>
+<path d="M248 200Q286.6 201.6 322 200" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322 200Q316.7 196.7 311 193" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322 200Q317.3 203.8 313 208" stroke="#648DAF" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 199Q371 167 410 128M330 199Q370 230 410 275" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M423 126Q466 102 510 106M423 126Q464 158 510 175" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M331 198Q370 163 412 129Q467 104 510 106L581 107" stroke="#648DAF" fill="none" stroke-width="4" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M394 128C392 114.2 404.8 103 418 105C432.4 104 444 118.8 442 128C443 141.8 430.0 153 418 151C403.6 152 393 137.2 394 128Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="418" y="136" fill="#405365" font-family="ui-monospace,monospace" font-size="22" text-anchor="middle">1</text>
+<path d="M393 275C391 261.2 403.8 250 417 252C431.4 251 443 265.8 441 275C442 288.8 429.0 300 417 298C402.6 299 392 284.2 393 275Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="417" y="283" fill="#405365" font-family="ui-monospace,monospace" font-size="22" text-anchor="middle">0</text>
+<path d="M491 175C489 161.2 501.8 150 515 152C529.4 151 541 165.8 539 175C540 188.8 527.0 200 515 198C500.6 199 490 184.2 491 175Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="515" y="183" fill="#405365" font-family="ui-monospace,monospace" font-size="22" text-anchor="middle">11</text>
+<path d="M499 84Q515.0 82 533 85Q544 84 543 97L542 117Q543 128 530 127Q515.0 129 497 126Q486 127 487 115L488 96Q487 83 499 84Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="515" y="114" fill="#405365" font-family="ui-monospace,monospace" font-size="24" text-anchor="middle">10</text>
+<path d="M602 88Q644.5 86 689 89Q700 88 699 101L698 242Q699 253 686 252Q644.5 254 600 251Q589 252 590 240L591 100Q590 87 602 88Z" stroke="#405365" fill="#FFFefa" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M608 128Q639.4 126.7 673.4 128" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M608 149Q646.8 148.0 687.5699999999999 149" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M608 170Q634.6 172.1 657.05 170" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M618 105Q644.5 103 673 106Q684 105 683 118L682 133Q683 144 670 143Q644.5 145 616 142Q605 143 606 131L607 117Q606 104 618 105Z" stroke="#648DAF" fill="#E6EEF4" stroke-width="2.7" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="644" y="132" fill="#405365" font-family="ui-monospace,monospace" font-size="23" text-anchor="middle">1011</text>
+<path d="M430 276Q478.2 274.7 523 270" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M522 176Q543.5 182.0 567 190" stroke="#AAB8C2" fill="none" stroke-width="3" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M556 69Q563.2 68.2 572 69" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M564 61Q564.0 69.0 564 77" stroke="#648DAF" fill="none" stroke-width="2" opacity="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
