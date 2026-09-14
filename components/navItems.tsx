@@ -23,7 +23,7 @@ export const navItems = [
     name: 'Education',
     icon: <GraduationCap strokeWidth="1.5px" className={'mr-2 w-5 '} />,
     IconElement: GraduationCap,
-    hotkey: 'A',
+    hotkey: 'E',
     iconClassname: 'mr-2 w-5 ',
   },
   {

@@ -66,18 +66,12 @@ function Index() {
         <p className="font-semibold text-[40px] tracking-tight mb-4">
           I am a <span className="text-neutral-500">software engineer.</span>
         </p>
-        <div className="text-md text-neutral-600 leading-relaxed space-y-4 max-w-2xl">
+        <div className="text-md text-neutral-600 leading-relaxed space-y-4 w-3/4">
           <p>
-            Software Engineer at TikTok. Previously at HeroUI, where I helped build HeroUI Chat. SUTD Computer Science graduate and Class of 2025 valedictorian.
+            Software Engineer at TikTok. Previously at HeroUI. SUTD Computer Science graduate and Class of 2025 valedictorian.
           </p>
         </div>
         <IconButtons />
-        <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-600">
-          <a href="https://www.linkedin.com/in/vincentius-roger/" className="underline underline-offset-4">LinkedIn</a>
-          <a href="https://github.com/vinroger" className="underline underline-offset-4">GitHub</a>
-          <a href="https://x.com/vinroger2" className="underline underline-offset-4">X</a>
-          <a href="mailto:vincentiusrogerk@gmail.com" className="underline underline-offset-4">Email</a>
-        </div>
         <Experience />
         <FeaturedProjects />
       </div>

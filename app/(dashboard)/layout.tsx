@@ -2,11 +2,19 @@ import BottomNavbar from '@/components/bottomnavbar';
 import { Navbar } from '@/components/navbar';
 import { Toaster } from 'sonner';
 
+const NAVBAR_WIDTH = '250px';
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <div className="flex min-h-dvh w-full">
-    <div className="hidden shrink-0 lg:block"><Navbar /></div>
-    <div className="fixed inset-x-0 bottom-0 z-10 lg:hidden"><BottomNavbar /></div>
-    <Toaster />
-    <main className="min-w-0 flex-1">{children}</main>
-  </div>;
+  return (
+    <div className="flex flex-row w-screen max-h-screen min-h-screen">
+      <div style={{ width: NAVBAR_WIDTH }} className="hidden lg:block">
+        <Navbar />
+      </div>
+      <div className="block lg:hidden fixed bottom-0 w-full z-10">
+        <BottomNavbar />
+      </div>
+      <Toaster />
+      <div className="flex-1 overflow-scroll ">{children}</div>
+    </div>
+  );
 }
