@@ -68,7 +68,7 @@ function Index() {
         </p>
         <div className="text-md text-neutral-600 leading-relaxed space-y-4 w-3/4">
           <p>
-            Software Engineer at TikTok. Previously at HeroUI. SUTD Computer Science graduate and Class of 2025 valedictorian.
+            Software engineer at TikTok (TikTok Search team), based in Singapore. Previously at HeroUI. SUTD Computer Science graduate and Class of 2025 valedictorian.
           </p>
         </div>
         <IconButtons />

@@ -5,6 +5,8 @@ report: /projects/query-guided-search/report.pdf
 ---
 # Reimagining Search Using the Query’s Ideal Bit Pattern
 
+I’m Vincentius Roger Kuswara, a software engineer at TikTok (TikTok Search team), based in Singapore.
+
 I started this project after reading [Exa’s description of its vector database](https://exa.ai/blog/building-web-scale-vector-db). The part I wanted to explore was the search inside a selected cluster: can we avoid some of the query-document dot product operations by using information we already have in the query?
 
 [Read the report (PDF)](/projects/query-guided-search/report.pdf) · [Code and experiments](https://github.com/rgrexplore/query-guided-search-exploration)

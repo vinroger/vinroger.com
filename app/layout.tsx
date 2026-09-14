@@ -11,7 +11,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 export const metadata: Metadata = {
   title: 'Vincentius Roger Kuswara',
   description:
-    'Software Engineer at TikTok. Projects in AI products, search and open source. SUTD Class of 2025 valedictorian.',
+    'Software engineer at TikTok (TikTok Search team), based in Singapore. Projects in AI products, search and open source. SUTD Class of 2025 valedictorian.',
   icons: {
     icon: '/favicon.ico', // /public/favicon-roger.ico
     shortcut: '/favicon.ico', // /public/favicon-roger.ico

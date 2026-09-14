@@ -1,5 +1,7 @@
 # vinroger.com
 
+I’m Vincentius Roger Kuswara, a software engineer at TikTok (TikTok Search team), based in Singapore.
+
 Personal portfolio, project articles and research reports.
 
 ## Run locally
