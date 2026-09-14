@@ -8,9 +8,9 @@ function Details() {
       institution: 'Singapore University of Technology and Design (SUTD)',
       degree: 'Bachelor of Engineering in Computer Science and Design',
       duration: 'September 2021 - May 2025',
-      gpa: 'CGPA: 4.96/5.00',
+      gpa: 'CGPA: 4.83/5.00',
       awards:
-        'ASEAN UG Scholarship, Honours List 2021/2022, Honours List 2022/2023',
+        'Valedictorian, Honours List for all three consecutive years, Singapore Computer Society Excellence Award, Full scholarship',
       logo: '/showcase/sutdlogo.png',
       showcaseImages: [
         '/showcase/clickbeat.png',

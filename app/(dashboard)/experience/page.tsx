@@ -7,7 +7,7 @@ function Index() {
       <div className="max-w-[850px] flex w-full flex-col pb-[100px] px-5 lg:px-0">
         <h1 className="font-semibold text-[40px] tracking-tight">Experience</h1>
         <h2 className="text-neutral-700 text-md mt-[10px] mb-10">
-          My internships and work experiences.
+          The companies I’ve worked with, including full-time roles and internships.
         </h2>
         <Details />
       </div>

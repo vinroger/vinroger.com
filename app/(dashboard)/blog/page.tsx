@@ -1,45 +1,11 @@
 import ProjectCard from '@/components/projectcard';
-import React from 'react';
+import { projects } from '@/lib/portfolio';
 
-function Index() {
-  return (
-    <div className="flex justify-center items-center flex-col pt-[90px] pb-[100px]">
-      <div className="max-w-[850px] flex w-full flex-col  px-5 lg:px-0">
-        <h1 className="font-semibold text-[40px] tracking-tight">Blog</h1>
-        <h2 className="text-neutral-700 text-md mt-[10px]">
-          Thoughts and ideas that I have written down.
-        </h2>
-        <p className=" text-lg font-semibold mt-10"> Stories</p>
-        <div className="bg-neutral-300 h-[1px] mt-2 mb-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-          <ProjectCard
-            className="col-span-1"
-            title="Singtel MAP Internship"
-            description="Management Associate in a nutshell: Leadership, Presentation, Coding, Project Management and Teamwork."
-            imageSrc="/blogs/singtel/singtel.png"
-            link="/blogs/singtel"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="Terrascope Internship"
-            description="Full stack development in sustainability! Data pipeline, ML integration, Time-series, and front-end."
-            imageSrc="/blogs/terrascope/terrascope2.png"
-            link="/blogs/singtel"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="Datature Internship"
-            description="Front-end development in AI! Data annotation, ML model training, and React rendering stuff."
-            imageSrc="/blogs/datature/datature.png"
-            link="/blogs/singtel"
-            noNewTab
-          />
-        </div>
-      </div>
-    </div>
-  );
+export default function BlogPage() {
+  const articles = projects.filter(project => ['query-guided-search', 'gitglimpse', 'quick-median', 'adswift'].includes(project.slug));
+  return <div className="mx-auto max-w-[900px] px-5 pb-28 pt-14 md:px-8 md:pt-20">
+    <h1 className="text-4xl font-semibold tracking-tight">Blog</h1>
+    <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600">Notes from building and experimenting. These project write-ups cover the ideas, implementation choices and results.</p>
+    <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">{articles.map(project => <ProjectCard key={project.slug} title={project.title} description={project.description} category={project.category} imageSrc={project.image} link={'/projects/'+project.slug} noNewTab />)}</div>
+  </div>;
 }
-
-export default Index;

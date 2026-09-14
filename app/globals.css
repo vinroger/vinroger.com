@@ -74,3 +74,20 @@
       @apply bg-background text-foreground;
     }
   }
+/* Project articles share one reading layout, including the older Markdown pages. */
+.project-article { color: #404040; font-size: 1rem; line-height: 1.85; overflow-wrap: anywhere; }
+.project-article h1 { color: #171717; font-size: clamp(2rem, 4vw, 2.65rem); line-height: 1.18; font-weight: 650; letter-spacing: -.035em; margin: 0 0 1.25rem; }
+.project-article h2 { color: #171717; font-size: 1.45rem; line-height: 1.35; font-weight: 600; letter-spacing: -.02em; margin: 2.5rem 0 1rem; }
+.project-article h3 { color: #171717; font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 .75rem; }
+.project-article p { margin: 0 0 1.2rem; }
+.project-article a { color: #171717; text-decoration: underline; text-underline-offset: 4px; }
+.project-article a:hover { color: #525252; }
+.project-article ul, .project-article ol { margin: 1rem 0 1.5rem; padding-left: 1.5rem; }
+.project-article ul { list-style: disc; }
+.project-article ol { list-style: decimal; }
+.project-article li { margin: .5rem 0; }
+.project-article img { max-width: 100%; height: auto; border-radius: .75rem; margin: 1.5rem auto; }
+.project-article pre { overflow-x: auto; background: #f5f5f5; padding: 1rem; border-radius: .5rem; }
+.project-article code { font-size: .9em; background: #f5f5f5; padding: .15em .3em; border-radius: .25rem; }
+a:focus-visible, button:focus-visible { outline: 2px solid #525252; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }

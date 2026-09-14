@@ -1,80 +1,19 @@
 import ProjectCard from '@/components/projectcard';
-import React from 'react';
+import { projects } from '@/lib/portfolio';
 
-function Index() {
-  return (
-    <div className="flex justify-center items-center flex-col pt-[90px] pb-[100px]">
-      <div className="max-w-[850px] flex w-full flex-col  px-5 lg:px-0">
-        <h1 className="font-semibold text-[40px] tracking-tight">Projects</h1>
-        <h2 className="text-neutral-700 text-md mt-[10px]">
-          My collection of startup projects or hobby projects that I am proud
-          of.
-        </h2>
-        <p className=" text-lg font-semibold mt-10"> Startup Projects 🚀</p>
-        <div className="bg-neutral-300 h-[1px] mt-2 mb-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-          <ProjectCard
-            className="col-span-1"
-            title="UImagine.io"
-            description="Transform ideas to design and code in seconds."
-            imageSrc="/uimagine.png"
-            link="https://uimagine.io"
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="OneLLM.co"
-            description="End-to-end no-code LLM fine-tuning studio."
-            imageSrc="/onellm.png"
-            link="https://onellm.co"
-          />
-        </div>
-        <p className=" text-lg font-semibold mt-20"> Hobby Projects ✨</p>
-        <div className="bg-neutral-300 h-[1px] mt-2 mb-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <ProjectCard
-            className="col-span-1"
-            title="AdSwift"
-            description="Data analytics collection and platform for outdoor advertising."
-            imageSrc="/projects/adswift.png"
-            link="/projects/adswift"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="Hungrybees"
-            description="Connecting people to group-buy together, splitting delivery costs."
-            imageSrc="/projects/hungrybees.png"
-            link="/projects/hungrybees"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="The Guiding Hand"
-            description="Client-Counselor portal for Gebirah Org with AI features."
-            imageSrc="/projects/guidinghand2.png"
-            link="/projects/the-guiding-hand"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="Cassandra DB Clone"
-            description="Implementing cassandra from scratch using Go and gRPC. (Distributed System)"
-            imageSrc="/projects/cassandra.png"
-            link="/projects/cassandra"
-            noNewTab
-          />
-          <ProjectCard
-            className="col-span-1"
-            title="GitGlimpse"
-            description="RAG framework for pull request retrieval and summarization. (Information Retrieval)"
-            imageSrc="/projects/gitglimpse.png"
-            link="/projects/gitglimpse"
-            noNewTab
-          />
-        </div>
+export default function ProjectsPage() {
+  const categories = ['Research', 'Built at HeroUI', 'Personal products', 'Open source', 'Student projects'];
+  return <div className="mx-auto max-w-[900px] px-5 pb-28 pt-14 md:px-8 md:pt-20">
+    <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
+    <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600">Products I’ve built, experiments I’ve run, and the details behind them. Each project covers the problem, the implementation and what came out of it.</p>
+    <nav aria-label="Project categories" className="my-8 flex flex-wrap gap-2">
+      {categories.map(category => <a key={category} href={'#'+category.toLowerCase().replaceAll(' ', '-')} className="rounded-full border border-neutral-200 px-4 py-2 text-sm hover:bg-neutral-100">{category}</a>)}
+    </nav>
+    {categories.map(category => <section key={category} id={category.toLowerCase().replaceAll(' ', '-')} className="scroll-mt-8 mt-12">
+      <h2 className="mb-6 border-b border-neutral-200 pb-3 text-xl font-semibold">{category}</h2>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {projects.filter(project => project.category === category).map(project => <ProjectCard key={project.slug} title={project.title} description={project.description} imageSrc={project.image} category={project.category} link={'/projects/'+project.slug} noNewTab />)}
       </div>
-    </div>
-  );
+    </section>)}
+  </div>;
 }
-
-export default Index;

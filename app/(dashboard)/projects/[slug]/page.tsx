@@ -4,101 +4,45 @@ import matter from 'gray-matter';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
-import Image from 'next/image';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download, ExternalLink } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
-interface PostProps {
-  params: { slug: string };
+const directory = path.join(process.cwd(), 'app/(dashboard)/projects/markdown');
+
+function readProject(slug: string) {
+  // Only load an article that exists in this directory.
+  const filename = `${slug}.md`;
+  if (!fs.readdirSync(directory).includes(filename)) notFound();
+  return matter(fs.readFileSync(path.join(directory, filename), 'utf8'));
 }
 
-export default async function Post({ params }: PostProps) {
-  const { slug } = params;
-  const markdownPath = path.join(
-    process.cwd(),
-    '/app/(dashboard)/projects/markdown/',
-    `${slug}.md`
-  );
-  const markdownWithMeta = fs.readFileSync(markdownPath, 'utf-8');
-  const { data: frontmatter, content } = matter(markdownWithMeta);
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const { data } = readProject(params.slug);
+  return { title: `${data.title || params.slug} | Vincentius Roger Kuswara`, description: data.description };
+}
 
-  const components = {
-    h1: ({ node, ...props }: any) => (
-      <h1 className="text-3xl font-bold mb-4 mt-6" {...props} />
-    ),
-    h2: ({ node, ...props }: any) => (
-      <h2 className="text-2xl font-semibold mb-3 mt-5" {...props} />
-    ),
-    h3: ({ node, ...props }: any) => (
-      <h3 className="text-xl font-medium mb-2 mt-4" {...props} />
-    ),
-    p: ({ node, ...props }: any) => (
-      <p className="mb-4 leading-relaxed" {...props} />
-    ),
-    ul: ({ node, ...props }: any) => (
-      <ul className="list-disc pl-5 mb-4" {...props} />
-    ),
-    ol: ({ node, ...props }: any) => (
-      <ol className="list-decimal pl-5 mb-4" {...props} />
-    ),
-    li: ({ node, ...props }: any) => <li className="mb-2" {...props} />,
-    blockquote: ({ node, ...props }: any) => (
-      <blockquote
-        className="border-l-4 border-neutral-300 pl-4 italic my-4"
-        {...props}
-      />
-    ),
-    code: ({ node, inline, ...props }: any) =>
-      inline ? (
-        <code className="bg-neutral-100 rounded px-1 py-0.5" {...props} />
-      ) : (
-        <code
-          className="block bg-neutral-100 rounded p-2 my-2 overflow-x-auto"
-          {...props}
-        />
-      ),
-    a: ({ node, ...props }: any) => (
-      <a className="text-blue-600 hover:underline" {...props} />
-    ),
-    // img: ({ node, ...props }: any) => (
-    //   <Image
-    //     src={props.src || ''}
-    //     alt={props.alt || ''}
-    //     width={500}
-    //     height={300}
-    //     layout="responsive"
-    //     className="rounded-lg"
-    //   />
-    // ),
-  };
-
-  return (
-    <div className="flex justify-center items-center flex-col pt-[90px]">
-      <div className="max-w-[850px] flex w-full flex-col pb-[100px] px-5 lg:px-0 text-wrap overflow-scroll">
-        {/* <h1 className="text-4xl font-bold mb-6">{frontmatter.title}</h1> */}
-        <a
-          className="text-neutral-500 flex space-x-2 text-sm items-center hover:underline"
-          href="/projects"
-        >
-          <ArrowLeft className="w-4" />
-          <p>Back to Project</p>
-        </a>
-        <Markdown
-          rehypePlugins={[rehypeRaw]}
-          remarkPlugins={[remarkGfm]}
-          components={components}
-        >
-          {content}
-        </Markdown>
-      </div>
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+  const { data, content } = readProject(params.slug);
+  return <article className="mx-auto max-w-[850px] px-5 pb-28 pt-12 md:px-8 md:pt-20">
+    <a href="/projects" className="mb-7 inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900"><ArrowLeft className="h-4 w-4" />All projects</a>
+    {data.image && <img src={data.image} alt={`${data.title} project`} className="mb-8 max-h-[420px] w-full rounded-xl border border-neutral-200 object-contain bg-neutral-50" />}
+    <div className="project-article">
+      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{content}</Markdown>
     </div>
-  );
+    {data.report && <section className="mt-12 border-t border-neutral-200 pt-8">
+      <h2 className="text-2xl font-semibold">Full report</h2>
+      <p className="mt-3 text-neutral-600">Read the complete methods, experiments and results in the PDF.</p>
+      <div className="my-5 flex flex-wrap gap-3">
+        <a href={data.report} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-4 py-3 text-sm text-white hover:bg-neutral-700">Open report<ExternalLink className="h-4 w-4" /></a>
+        <a href={data.report} download className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-3 text-sm hover:bg-neutral-50">Download PDF<Download className="h-4 w-4" /></a>
+      </div>
+      <iframe src={`${data.report}#view=FitH`} title={`${data.title} full report`} className="hidden h-[900px] w-full rounded-xl border border-neutral-200 md:block" loading="lazy" />
+      <p className="text-sm text-neutral-500 md:hidden">Use “Open report” for a full-screen view on your phone.</p>
+    </section>}
+  </article>;
 }
 
-export async function generateStaticParams() {
-  const files = fs.readdirSync(
-    path.join(process.cwd(), '/app/(dashboard)/projects/markdown/')
-  );
-  return files.map((filename) => ({
-    slug: filename.replace('.md', ''),
-  }));
+export function generateStaticParams() {
+  return fs.readdirSync(directory).filter(filename => filename.endsWith('.md') && filename !== 'gitglimpse.md' && filename !== 'the-guiding-hand.md').map(filename => ({ slug: filename.slice(0, -3) }));
 }

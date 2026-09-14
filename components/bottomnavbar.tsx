@@ -1,88 +1,15 @@
 'use client';
-
-import React, { useRef, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { navSections } from './navItems';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { navItems } from './navItems';
 
-function BottomNavbar() {
+export default function BottomNavbar() {
   const pathname = usePathname();
-  const navRef = useRef(null);
-  const [showLeftScroll, setShowLeftScroll] = useState(false);
-  const [showRightScroll, setShowRightScroll] = useState(false);
-
-  const checkScroll = () => {
-    if (navRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = navRef.current;
-      setShowLeftScroll(scrollLeft > 0);
-      setShowRightScroll(scrollLeft + 50 < scrollWidth - clientWidth);
-    }
-  };
-
-  useEffect(() => {
-    checkScroll();
-    window.addEventListener('resize', checkScroll);
-    return () => window.removeEventListener('resize', checkScroll);
-  }, []);
-
-  const allItems = navSections.flatMap((section: any) => section.items);
-
-  return (
-    <div className="relative">
-      <nav
-        ref={navRef}
-        className="bg-white bg-opacity-90 backdrop-blur-md shadow-lg h-20 flex items-center justify-start max-w-full overflow-scroll border-t-[1px] overflow-x-auto p-2 border-neutral-200 scrollbar-hide"
-        onScroll={checkScroll}
-      >
-        {allItems.map((item: any) => {
-          const itemKey = item.overrideKey || item.name.toLowerCase();
-          const isActive = pathname?.split('/')[1] === itemKey;
-
-          return (
-            <div key={item.name} className="flex-shrink-0 h-full mr-1">
-              {item.externalLink ? (
-                <a
-                  href={`https://${item.name.toLowerCase()}.com`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center h-full p-3 min-w-24 transition-all text-neutral-600 hover:bg-gray-100 rounded-full"
-                >
-                  <item.IconElement strokeWidth="1.5px" />
-                  <span className="text-xs mt-1">{item.name}</span>
-                </a>
-              ) : (
-                <Link
-                  href={`/${itemKey}`}
-                  className={`flex flex-col items-center justify-center h-full p-3 min-w-24 transition-all ${
-                    isActive
-                      ? 'text-neutral-600 font-bold shadow-md border border-neutral-200 rounded-full'
-                      : 'text-neutral-600 hover:bg-gray-100 rounded-full'
-                  }`}
-                >
-                  <item.IconElement
-                    strokeWidth={cn(isActive ? '2px' : '1.5px')}
-                  />
-                  <span className="text-xs mt-1">{item.name}</span>
-                </Link>
-              )}
-            </div>
-          );
-        })}
-      </nav>
-      {showLeftScroll && (
-        <div className="absolute left-0 top-0 mt-1 bottom-0 bg-gradient-to-r from-white via-white to-transparent w-12 flex items-center justify-start pointer-events-none">
-          <ChevronLeft className="text-neutral-400" />
-        </div>
-      )}
-      {showRightScroll && (
-        <div className="absolute right-0 top-0 mt-1 bottom-0 bg-gradient-to-l from-white via-white to-transparent w-12 flex items-center justify-end pointer-events-none">
-          <ChevronRight className="text-neutral-400" />
-        </div>
-      )}
-    </div>
-  );
+  return <nav aria-label="Mobile navigation" className="grid grid-cols-5 border-t border-neutral-200 bg-white px-1 pb-[max(8px,env(safe-area-inset-bottom))] pt-2">
+    {navItems.map(item => {
+      const route = item.overrideKey ?? item.name.toLowerCase();
+      const active = pathname.split('/')[1] === route;
+      return <Link key={item.name} href={`/${route}`} aria-current={active ? 'page' : undefined} className={`flex min-h-12 flex-col items-center justify-center gap-1 rounded-lg px-1 text-[10px] ${active ? 'bg-neutral-100 font-semibold text-neutral-950' : 'text-neutral-500'}`}><item.IconElement size={20} strokeWidth={1.5} /><span>{item.name === 'Work Experience' ? 'Experience' : item.name}</span></Link>;
+    })}
+  </nav>;
 }
-
-export default BottomNavbar;

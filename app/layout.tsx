@@ -10,7 +10,7 @@ import { Analytics } from '@vercel/analytics/react';
 export const metadata: Metadata = {
   title: 'Vincentius Roger Kuswara',
   description:
-    'Full-stack and GenAI Developer. Computer Science at Singapore University of Technology and Design (SUTD)',
+    'Software Engineer at TikTok. Projects in AI products, search and open source. SUTD Class of 2025 valedictorian.',
   icons: {
     icon: '/favicon.ico', // /public/favicon-roger.ico
     shortcut: '/favicon.ico', // /public/favicon-roger.ico

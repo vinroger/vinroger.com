@@ -1,85 +1,11 @@
-'use client';
+import { experience } from '@/lib/portfolio';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react'; // Make sure to install lucide-react
-import { useRouter } from 'next/navigation';
-
-interface ExperienceRowProps {
-  companyName: string;
-  experience: string;
-  imageSrc: string;
-  link: string;
+export default function Experience() {
+  return <section className="mt-12">
+    <div className="mb-4 flex items-center justify-between"><h2 className="text-xl font-semibold">Work experience</h2><a href="/experience" className="text-sm text-neutral-600 underline underline-offset-4">View all</a></div>
+    <div className="divide-y divide-neutral-200 border-y border-neutral-200">{experience.map(job => <a key={job.company} href="/experience" className="flex flex-wrap items-start justify-between gap-2 py-4 hover:text-neutral-500">
+      <div><h3 className="font-semibold">{job.company}</h3><p className="mt-1 text-sm text-neutral-600">Software Engineer · {job.type}</p></div>
+      <p className="text-sm text-neutral-500">{job.period}</p>
+    </a>)}</div>
+  </section>;
 }
-
-const ExperienceRow: React.FC<ExperienceRowProps> = ({
-  companyName,
-  experience,
-  imageSrc,
-  link,
-}) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter();
-
-  return (
-    <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={() => router.push(link)}
-      className="flex items-center p-3 rounded-lg transition-all duration-200 hover:shadow-sm border-[1px] border-transparent hover:border-neutral-300 box-border cursor-pointer relative"
-    >
-      <div className="flex-shrink-0 w-12 h-12 mr-4 justify-center items-center flex">
-        <Image
-          src={imageSrc}
-          alt={companyName}
-          width={48}
-          height={48}
-          className="rounded-md"
-        />
-      </div>
-      <div className="flex-grow">
-        <h3 className="font-semibold text-[15px]">{experience}</h3>
-        <p className="text-neutral-600 text-sm">{companyName}</p>
-      </div>
-      <div
-        className={`transition-opacity duration-200 ${
-          isHovered ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <ArrowRight className="text-neutral-500" size={20} />
-      </div>
-    </div>
-  );
-};
-
-function Experience() {
-  return (
-    <div className="mt-10">
-      <div className="border-[1px] border-neutral-200 rounded-lg p-5">
-        <p className="font-semibold mb-4 text-lg">Work Experience</p>
-        <div className="space-y-4">
-          <ExperienceRow
-            companyName="Singtel"
-            experience="Full-stack Engineer Intern (Management Associate Program)"
-            imageSrc="/singtel.png"
-            link="/experience"
-          />
-          <ExperienceRow
-            companyName="Terrascope"
-            experience="Full-stack Engineer Intern"
-            imageSrc="/terrascope.png"
-            link="/experience"
-          />
-          <ExperienceRow
-            companyName="Datature"
-            experience="Front-end Engineer Intern"
-            imageSrc="/datature.png"
-            link="/experience"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Experience;
