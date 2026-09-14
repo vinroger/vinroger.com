@@ -9,9 +9,9 @@ export default function ProjectsPage() {
     <nav aria-label="Project categories" className="my-8 flex flex-wrap gap-2">
       {categories.map(category => <a key={category} href={'#'+category.toLowerCase().replaceAll(' ', '-')} className="rounded-full border border-neutral-200 px-4 py-2 text-sm hover:bg-neutral-100">{category}</a>)}
     </nav>
-    {categories.map(category => <section key={category} id={category.toLowerCase().replaceAll(' ', '-')} className="scroll-mt-8 mt-12">
-      <h2 className="mb-6 border-b border-neutral-200 pb-3 text-xl font-semibold">{category}</h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    {categories.map(category => <section key={category} id={category.toLowerCase().replaceAll(' ', '-')} className="scroll-mt-8 mt-9">
+      <h2 className="mb-4 border-b border-neutral-200 pb-3 text-xl font-semibold">{category}</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {projects.filter(project => project.category === category).map(project => <ProjectCard key={project.slug} title={project.title} description={project.description} imageSrc={project.image} category={project.category} link={'/projects/'+project.slug} noNewTab />)}
       </div>
     </section>)}

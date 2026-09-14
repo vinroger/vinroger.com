@@ -1,6 +1,6 @@
 // Shared summaries keep the home page and project list in sync.
 export const projects = [
-  { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '', featured: true },
+  { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '/projects/query-guided-search/cover.svg', featured: true },
   { slug: 'heroui-chat', title: 'HeroUI Chat', category: 'Built at HeroUI', description: 'An AI interface builder I helped take from an early prototype to production at HeroUI.', image: '', featured: true },
   { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/uimagine.png', featured: true },
   { slug: 'onellm', title: 'OneLLM', category: 'Personal products', description: 'Build training datasets, fine-tune language models and evaluate them in one browser workspace.', image: '/onellm.png', featured: false },
