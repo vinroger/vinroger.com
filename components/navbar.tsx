@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { useEffect, useRef } from 'react';
 import { toTitleCase } from '@/utils/functions/string';
 import { navItems, navSections } from './navItems';
+import { ArrowUpRight } from 'lucide-react';
 
 function NavItem({
   item,
@@ -24,7 +25,7 @@ function NavItem({
   itemKey: string;
   itemHotkey: string;
   overrideKey?: string;
-  externalLink?: boolean;
+  externalLink?: string;
 }) {
   const pathname = usePathname();
 
@@ -42,7 +43,11 @@ function NavItem({
         isActive &&
           'text-black border-neutral-300 border-[0.5px] shadow-sm font-semibold'
       )}
-      onClick={onClick}
+      href={externalLink}
+      onClick={(event) => {
+        if (externalLink) event.preventDefault();
+        onClick();
+      }}
       active={isActive}
     >
       {item}
@@ -52,7 +57,10 @@ function NavItem({
         </span>
       )}
       {externalLink && (
-        <span className="ml-auto text-xs text-neutral-500">↗</span>
+        <ArrowUpRight
+          aria-hidden="true"
+          className="ml-auto h-4 w-4 shrink-0 text-neutral-500 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+        />
       )}
     </NavigationMenuLink>
   );
@@ -105,7 +113,7 @@ function NavItemRenderer({
       itemKey={itemName.toLowerCase()}
       itemHotkey={itemHotkey}
       overrideKey={overrideKey}
-      externalLink={externalLink as any}
+      externalLink={externalLink}
     />
   );
 }

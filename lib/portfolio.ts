@@ -2,15 +2,15 @@
 export const projects = [
   { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '/projects/covers/query-guided-search.svg', featured: true },
   { slug: 'heroui-chat', title: 'HeroUI Chat', category: 'Built at HeroUI', description: 'An AI interface builder I helped take from an early prototype to production at HeroUI.', image: '/projects/covers/heroui-chat.svg', featured: true },
-  { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/projects/covers/uimagine.svg', featured: true },
-  { slug: 'onellm', title: 'OneLLM', category: 'Personal products', description: 'Build training datasets, fine-tune language models and evaluate them in one browser workspace.', image: '/projects/covers/onellm.svg', featured: false },
-  { slug: 'adswift', title: 'AdSwift', category: 'Personal products', description: 'An outdoor advertising project connecting digital displays, content management and audience measurement.', image: '/projects/covers/adswift.svg', featured: false },
-  { slug: 'gitglimpse', title: 'GitGlimpse', category: 'Research', description: 'Search pull requests by meaning and keywords, then build answers with links back to the source.', image: '/projects/covers/gitglimpse.svg', featured: true },
+  { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/uimagine.png', featured: true },
+  { slug: 'onellm', title: 'OneLLM', category: 'Personal products', description: 'Build training datasets, fine-tune language models and evaluate them in one browser workspace.', image: '/onellm.png', featured: false },
+  { slug: 'adswift', title: 'AdSwift', category: 'Personal products', description: 'An outdoor advertising project connecting digital displays, content management and audience measurement.', image: '/projects/adswift.png', featured: false },
+  { slug: 'gitglimpse', title: 'GitGlimpse', category: 'Research', description: 'Search pull requests by meaning and keywords, then build answers with links back to the source.', image: '/projects/gitglimpse.png', featured: true },
   { slug: 'quick-median', title: 'Quick Median', category: 'Open source', description: 'A small JavaScript package that finds a median without sorting the entire array.', image: '/projects/covers/quick-median.svg', featured: false },
   { slug: 'heroui-contributions', title: 'HeroUI contributions', category: 'Open source', description: 'Making large Select, Autocomplete and Listbox components more responsive through virtualization.', image: '/projects/covers/heroui-contributions.svg', featured: false },
-  { slug: 'cassandra', title: 'TunaDB', category: 'University projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/covers/cassandra.svg', featured: false },
-  { slug: 'hungrybees', title: 'Hungrybees', category: 'University projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/covers/hungrybees.svg', featured: false },
-  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'University projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/covers/the-guiding-hand.svg', featured: false },
+  { slug: 'cassandra', title: 'TunaDB', category: 'University projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/cassandra.png', featured: false },
+  { slug: 'hungrybees', title: 'Hungrybees', category: 'University projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/hungrybees.png', featured: false },
+  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'University projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/guidinghand2.png', featured: false },
 ];
 
 export const experience = [
