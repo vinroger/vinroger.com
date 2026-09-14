@@ -2,7 +2,7 @@ import ProjectCard from '@/components/projectcard';
 import { projects } from '@/lib/portfolio';
 
 export default function ProjectsPage() {
-  const categories = ['Research', 'Built at HeroUI', 'Personal products', 'Open source', 'Student projects'];
+  const categories = ['Research', 'Built at HeroUI', 'Personal products', 'Open source', 'University projects'];
   return <div className="mx-auto max-w-[900px] px-5 pb-28 pt-14 md:px-8 md:pt-20">
     <h1 className="text-4xl font-semibold tracking-tight">Projects</h1>
     <p className="mt-4 max-w-2xl leading-relaxed text-neutral-600">Products I’ve built, experiments I’ve run, and the details behind them. Each project covers the problem, the implementation and what came out of it.</p>

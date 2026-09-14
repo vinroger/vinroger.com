@@ -8,9 +8,9 @@ export const projects = [
   { slug: 'gitglimpse', title: 'GitGlimpse', category: 'Research', description: 'Search pull requests by meaning and keywords, then build answers with links back to the source.', image: '/projects/covers/gitglimpse.svg', featured: true },
   { slug: 'quick-median', title: 'Quick Median', category: 'Open source', description: 'A small JavaScript package that finds a median without sorting the entire array.', image: '/projects/covers/quick-median.svg', featured: false },
   { slug: 'heroui-contributions', title: 'HeroUI contributions', category: 'Open source', description: 'Making large Select, Autocomplete and Listbox components more responsive through virtualization.', image: '/projects/covers/heroui-contributions.svg', featured: false },
-  { slug: 'cassandra', title: 'TunaDB', category: 'Student projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/covers/cassandra.svg', featured: false },
-  { slug: 'hungrybees', title: 'Hungrybees', category: 'Student projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/covers/hungrybees.svg', featured: false },
-  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'Student projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/covers/the-guiding-hand.svg', featured: false },
+  { slug: 'cassandra', title: 'TunaDB', category: 'University projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/covers/cassandra.svg', featured: false },
+  { slug: 'hungrybees', title: 'Hungrybees', category: 'University projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/covers/hungrybees.svg', featured: false },
+  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'University projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/covers/the-guiding-hand.svg', featured: false },
 ];
 
 export const experience = [
