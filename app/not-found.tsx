@@ -1,12 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import BottomNavbar from '@/components/bottomnavbar';
-import { Navbar } from '@/components/navbar';
-import { Toaster } from 'sonner';
+import { SiteShell } from '@/components/site-shell';
 import { ArrowLeft, RefreshCw, Code, Briefcase, FileText } from 'lucide-react';
 
-const NAVBAR_WIDTH = '250px';
 
 export default function Error({
   error,
@@ -16,15 +13,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="flex flex-row w-screen max-h-screen min-h-screen">
-      <div style={{ width: NAVBAR_WIDTH }} className="hidden lg:block">
-        <Navbar />
-      </div>
-      <div className="block lg:hidden fixed bottom-0 w-full z-10">
-        <BottomNavbar />
-      </div>
-      <Toaster />
-      <div className="flex-1 overflow-scroll">
+    <SiteShell>
         <div className="flex justify-center items-center flex-col pt-[90px] pb-[100px]">
           <div className="max-w-[850px] flex w-full flex-col px-5 lg:px-0">
             <h1 className="font-semibold text-[40px] tracking-tight">
@@ -102,7 +91,6 @@ export default function Error({
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    </SiteShell>
   );
 }

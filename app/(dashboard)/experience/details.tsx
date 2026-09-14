@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { experience } from '@/lib/portfolio';
 
 const logos: Record<string, string> = {
-  TikTok: '/tiktok.svg', HeroUI: '/heroui.png', Singtel: '/singtel.png',
+  TikTok: '/tiktok-color.png', HeroUI: '/heroui.png', Singtel: '/singtel.png',
   Terrascope: '/terrascope.png', Datature: '/datature.png',
 };
 
@@ -12,7 +12,7 @@ export default function Details() {
     <div className="flex flex-col lg:flex-row p-5 w-full lg:space-x-4">
       <div className="flex w-full lg:w-2/5 flex-col mb-5 lg:mb-0">
         <div className="flex flex-row w-full items-center pr-5">
-          <Image src={logos[job.company]} alt={`${job.company} logo`} width={64} height={64} className="h-16 w-16 shrink-0 rounded-lg object-contain" />
+          <Image src={logos[job.company]} alt={`${job.company} logo`} width={64} height={64} className="h-16 w-16 shrink-0 rounded-lg bg-white object-contain" />
           <p className="font-semibold ml-5 flex-grow">{job.company}</p>
         </div>
         <p className="text-neutral-500 text-sm mt-2">{job.period}</p>

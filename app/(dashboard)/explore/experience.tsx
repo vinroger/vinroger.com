@@ -26,20 +26,21 @@ const ExperienceRow: React.FC<ExperienceRowProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => router.push(link)}
-      className="flex items-center p-3 rounded-lg transition-all duration-200 hover:shadow-sm border-[1px] border-transparent hover:border-neutral-300 box-border cursor-pointer relative"
+      className="flex items-center px-2 py-1 rounded-lg transition-all duration-200 hover:shadow-sm border-[1px] border-transparent hover:border-neutral-300 box-border cursor-pointer relative"
     >
-      <div className="flex-shrink-0 w-12 h-12 mr-4 justify-center items-center flex">
+      <div className="flex-shrink-0 w-8 h-8 mr-3 justify-center items-center flex">
         <Image
           src={imageSrc}
           alt={companyName}
-          width={48}
-          height={48}
-          className="rounded-md"
+          width={32}
+          height={32}
+          priority
+          className="h-8 w-8 rounded-md bg-white object-contain"
         />
       </div>
       <div className="flex-grow">
-        <h3 className="font-semibold text-[15px]">{experience}</h3>
-        <p className="text-neutral-600 text-sm">{companyName}</p>
+        <h3 className="font-semibold text-[15px] leading-5">{experience}</h3>
+        <p className="text-neutral-600 text-sm leading-4">{companyName}</p>
       </div>
       <div
         className={`transition-opacity duration-200 ${
@@ -56,12 +57,12 @@ function Experience() {
   return (
     <div className="mt-10">
       <div className="border-[1px] border-neutral-200 rounded-lg p-5">
-        <p className="font-semibold mb-4 text-lg">Work Experience</p>
-        <div className="space-y-4">
+        <p className="font-semibold mb-3 text-lg">Work Experience</p>
+        <div className="space-y-0.5">
           <ExperienceRow
             companyName="TikTok"
             experience="Software Engineer"
-            imageSrc="/tiktok.svg"
+            imageSrc="/tiktok-color.png"
             link="/experience"
           />
           <ExperienceRow

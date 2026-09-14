@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Download, ExternalLink } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { ImagePreviewProvider, PreviewImage } from '@/components/image-preview';
 
 const directory = path.join(process.cwd(), 'app/(dashboard)/projects/markdown');
 
@@ -26,15 +27,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { data, content } = readProject(params.slug);
   return <article className="mx-auto max-w-[850px] px-5 pb-28 pt-12 md:px-8 md:pt-20">
     <a href="/projects" className="mb-7 inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900"><ArrowLeft className="h-4 w-4" />All projects</a>
-    {data.image && <img src={data.image} alt={`${data.title} project`} className="mb-8 max-h-[420px] w-full rounded-xl border border-neutral-200 object-contain bg-neutral-50" />}
+    <ImagePreviewProvider>
+    {data.image && <PreviewImage src={data.image} alt={`${data.title} project`} className="mb-8 max-h-[420px] w-full rounded-xl border border-neutral-200 object-contain bg-neutral-50" />}
     <div className="project-article">
-      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{content}</Markdown>
+      <Markdown
+        rehypePlugins={[rehypeRaw]}
+        remarkPlugins={[remarkGfm]}
+        components={{
+          img: ({ node, ...props }) => <PreviewImage {...props} />,
+          a: ({ node, href, children, ...props }) =>
+            /\.(png|jpe?g|webp|gif|svg)(?:[?#].*)?$/i.test(href || '')
+              ? <span>{children}</span>
+              : <a href={href} {...props}>{children}</a>,
+        }}
+      >{content}</Markdown>
     </div>
+    </ImagePreviewProvider>
     {data.report && <section className="mt-12 border-t border-neutral-200 pt-8">
       <h2 className="text-2xl font-semibold">Full report</h2>
       <p className="mt-3 text-neutral-600">Read the complete methods, experiments and results in the PDF.</p>
       <div className="my-5 flex flex-wrap gap-3">
-        <a href={data.report} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-4 py-3 text-sm text-white hover:bg-neutral-700">Open report<ExternalLink className="h-4 w-4" /></a>
+        <a href={data.report} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm text-primary-foreground hover:opacity-80">Open report<ExternalLink className="h-4 w-4" /></a>
         <a href={data.report} download className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-3 text-sm hover:bg-neutral-50">Download PDF<Download className="h-4 w-4" /></a>
       </div>
       <iframe src={`${data.report}#view=FitH`} title={`${data.title} full report`} className="hidden h-[900px] w-full rounded-xl border border-neutral-200 md:block" loading="lazy" />

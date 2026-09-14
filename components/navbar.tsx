@@ -1,187 +1,93 @@
 'use client';
-import { useRouter, usePathname } from 'next/navigation';
 
-import {
-  NavigationMenu,
-  NavigationMenuLink,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { ArrowUpRight, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
+import { NavigationMenu, NavigationMenuLink, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { useEffect, useRef } from 'react';
 import { toTitleCase } from '@/utils/functions/string';
 import { navItems, navSections } from './navItems';
-import { ArrowUpRight } from 'lucide-react';
+import { ThemeToggle } from './theme-toggle';
 
-function NavItem({
-  item,
-  onClick,
-  itemKey,
-  itemHotkey,
-  overrideKey,
-  externalLink,
-}: {
-  item: React.ReactNode;
-  onClick: () => void;
-  itemKey: string;
-  itemHotkey: string;
-  overrideKey?: string;
-  externalLink?: string;
-}) {
-  const pathname = usePathname();
+const pages = navItems.map(item => ({
+  href: `/${item.overrideKey ?? item.name.toLowerCase()}`,
+  key: item.hotkey.toLowerCase(),
+}));
 
-  const isActive =
-    !externalLink &&
-    !!pathname &&
-    (pathname.split('/')[1] === itemKey.toLowerCase() ||
-      pathname.split('/')[1] === (overrideKey ?? itemKey).toLowerCase());
-
-  return (
-    <NavigationMenuLink
-      className={cn(
-        navigationMenuTriggerStyle(),
-        'w-full justify-start items-center cursor-pointer font-medium bg-transparent text-neutral-400 text-sm mb-1 p-3',
-        isActive &&
-          'text-black border-neutral-300 border-[0.5px] shadow-sm font-semibold'
-      )}
-      href={externalLink}
-      onClick={(event) => {
-        if (externalLink) event.preventDefault();
-        onClick();
-      }}
-      active={isActive}
-    >
-      {item}
-      {itemHotkey && (
-        <span className="ml-auto text-xs text-neutral-500 border-[1px] p-1 rounded-sm px-1.5 shadow-xs w-6 flex justify-center">
-          {itemHotkey}
-        </span>
-      )}
-      {externalLink && (
-        <ArrowUpRight
-          aria-hidden="true"
-          className="ml-auto h-4 w-4 shrink-0 text-neutral-500 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
-        />
-      )}
-    </NavigationMenuLink>
-  );
-}
-
-function NavItemRenderer({
-  itemName,
-  itemKey,
-  itemHotkey,
-  icon,
-  iconClassname,
-  overrideKey,
-  externalLink,
-}: {
-  itemKey: string;
-  itemName: string;
-  itemHotkey: string;
-  icon: React.ReactNode;
-  iconClassname: string;
-  overrideKey?: string;
-  externalLink?: string;
-}) {
+export function Navbar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
   const router = useRouter();
   const pathname = usePathname();
-  const isActive =
-    !!pathname && pathname.split('/')[1] === itemKey.toLowerCase();
-
-  const handleClick = () => {
-    if (externalLink) {
-      window.open(externalLink, '_blank');
-    } else {
-      router.push(`/${(overrideKey ?? itemName).toLowerCase()}`);
-    }
-  };
-
-  return (
-    <NavItem
-      item={
-        <div
-          className={cn(
-            'flex flex-row items-center',
-            isActive && ' text-[14.5px]'
-          )}
-        >
-          <div className={iconClassname}>{icon}</div>
-          <p className="ml-2">{toTitleCase(itemName)}</p>
-        </div>
-      }
-      onClick={handleClick}
-      itemKey={itemName.toLowerCase()}
-      itemHotkey={itemHotkey}
-      overrideKey={overrideKey}
-      externalLink={externalLink}
-    />
-  );
-}
-
-export function Navbar() {
-  const userButtonRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const handleKeyPress = (event: KeyboardEvent) => {
-    const pressedKey = event.key.toLowerCase();
-    navSections.forEach((section: any) => {
-      const matchingNavItem = section.items.find(
-        (item: any) => item?.hotkey?.toLowerCase() === pressedKey.toLowerCase()
-      );
-      if (matchingNavItem) {
-        const toUse = matchingNavItem.overrideKey ?? matchingNavItem.name;
-        router.push(`/${toUse.toLowerCase()}`);
-      }
-    });
-  };
 
   useEffect(() => {
+    function handleKeyPress(event: KeyboardEvent) {
+      // Typing and image-preview controls should not trigger page navigation.
+      const target = event.target instanceof Element ? event.target : null;
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey ||
+          target?.closest('input, textarea, select, [contenteditable="true"], [role="dialog"]')) return;
+      const page = pages.find(page => page.key === event.key.toLowerCase());
+      if (page) { event.preventDefault(); router.push(page.href); }
+    }
     window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [handleKeyPress]);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [router]);
 
-  return (
-    <div className="flex flex-col border-neutral-200 border-e-[1px] min-h-full justify-start bg-neutral-50 p-4">
-      <a
-        className="flex flex-row items-center cursor-pointer hover:opacity-50 mb-10 p-2"
-        href={'/explore'}
-      >
-        <img
-          src="/personalphoto.jpeg"
-          className="w-10 rounded-full mr-2"
-          alt=""
-        />
-        <div className="flex flex-col">
-          <p className="text-sm font-semibold ">Vincentius Roger</p>
-          <p className="text-neutral-500 text-xs">Software Engineer</p>
-        </div>
-      </a>
-      <NavigationMenu className="flex-col items-start justify-start flex-1 w-full max-w-full mt-3 max-h-fit">
-        {navSections.map((section: any) => (
-          <div key={section.name} className="w-full mb-6">
-            <h3 className="text-xs font-semibold text-neutral-500 mb-2">
-              {section.name}
-            </h3>
-            <div className="flex flex-col w-full list-none">
-              {section.items.map((item: any) => (
-                <NavItemRenderer
-                  key={item.name}
-                  itemHotkey={item.hotkey}
-                  itemKey={item.name}
-                  itemName={item.name}
-                  icon={item.icon}
-                  iconClassname={item.iconClassname}
-                  overrideKey={item.overrideKey}
-                  externalLink={item.externalLink}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </NavigationMenu>
+  useEffect(() => {
+    let idle: number | undefined;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const prefetchPages = () => pages.forEach(page => router.prefetch(page.href));
+    function schedule() {
+      // Reuse Next's route cache after the first page finishes loading.
+      if ('requestIdleCallback' in window) idle = window.requestIdleCallback(prefetchPages, { timeout: 2000 });
+      else timer = setTimeout(prefetchPages, 1000);
+    }
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+    return () => {
+      window.removeEventListener('load', schedule);
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+      if (timer !== undefined) clearTimeout(timer);
+    };
+  }, [router]);
+
+  return <div className={cn('flex h-full flex-col overflow-x-hidden overflow-y-auto border-r border-border bg-neutral-50', collapsed ? 'p-2' : 'p-4')}>
+    <div className={cn('mb-10', collapsed ? 'flex flex-col items-center gap-3' : 'relative')}>
+      <Link href="/explore" className="flex items-center p-2 hover:opacity-70" aria-label="Vincentius Roger, home">
+        <img src="/personalphoto.jpeg" className={cn('h-10 w-10 shrink-0 rounded-full', !collapsed && 'mr-2')} alt="" />
+        {!collapsed && <div className="flex min-w-0 flex-col"><p className="text-sm font-semibold">Vincentius Roger</p><p className="text-xs text-neutral-500">Software Engineer</p></div>}
+      </Link>
+      <button type="button" onClick={onToggle} aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'} aria-expanded={!collapsed}
+        title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+        className={cn('flex h-7 w-7 items-center justify-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground', !collapsed && 'absolute -right-2 -top-2')}>
+        {collapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
+      </button>
     </div>
-  );
+    <NavigationMenu className="mt-3 flex w-full max-w-full flex-1 flex-col items-start justify-start">
+      {navSections.map(section => <div key={section.name} className="mb-6 w-full">
+        {!collapsed && <h3 className="mb-2 text-xs font-semibold text-neutral-500">{section.name}</h3>}
+        <div className="flex w-full list-none flex-col">
+          {section.items.map(item => {
+            const external = 'externalLink' in item ? item.externalLink : undefined;
+            const href = external || `/${item.overrideKey ?? item.name.toLowerCase()}`;
+            const hotkey = 'hotkey' in item ? item.hotkey : undefined;
+            const active = !external && pathname.split('/')[1] === href.slice(1);
+            return <NavigationMenuLink key={item.name} asChild active={active}>
+              <Link href={href} prefetch={false} onMouseEnter={() => { if (!external) router.prefetch(href); }}
+                target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}
+                aria-label={item.name} aria-current={active ? 'page' : undefined}
+                title={collapsed ? `${item.name}${hotkey ? ` (${hotkey})` : ''}` : undefined}
+                className={cn(navigationMenuTriggerStyle(), 'group relative mb-1 w-full cursor-pointer items-center bg-transparent text-sm font-medium text-neutral-400',
+                  collapsed ? 'justify-center px-2' : 'justify-start p-3', active && 'border border-neutral-300 text-black shadow-sm font-semibold')}>
+                <item.IconElement size={20} strokeWidth={1.5} className={cn('shrink-0', !collapsed && 'mr-4')} />
+                {!collapsed && <span>{toTitleCase(item.name)}</span>}
+                {hotkey && !collapsed && <span className="ml-auto flex w-6 justify-center rounded-sm border border-neutral-300 px-1.5 py-1 text-xs text-neutral-500">{hotkey}</span>}
+                {external && <ArrowUpRight aria-hidden="true" className={cn('h-4 w-4 shrink-0 text-neutral-500 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100', collapsed ? 'absolute right-0 top-0 h-3 w-3' : 'ml-auto')} />}
+              </Link>
+            </NavigationMenuLink>;
+          })}
+        </div>
+      </div>)}
+    </NavigationMenu>
+    <div className="mt-3 border-t border-border pt-3"><ThemeToggle compact={collapsed} /></div>
+  </div>;
 }

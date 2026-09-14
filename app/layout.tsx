@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 
 const inter = Inter({ subsets: ['latin'] });
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Vincentius Roger Kuswara',
@@ -33,16 +34,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           fontSans.variable
         )}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }

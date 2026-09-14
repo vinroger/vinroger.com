@@ -106,3 +106,40 @@ a:focus-visible, button:focus-visible { outline: 2px solid #525252; outline-offs
 .project-visual-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .project-visual-pair figure { min-width: 0; }
 @media (max-width: 640px) { .project-visual-pair { grid-template-columns: 1fr; gap: 0; } }
+
+/* Preserve the existing neutral palette in light mode, with a charcoal counterpart. */
+.dark { --background: 0 0% 7%; --card: 0 0% 10%; --popover: 0 0% 10%; --border: 0 0% 20%; }
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+.dark .bg-white { background-color: #191919; }
+.dark .bg-neutral-50 { background-color: #171717; }
+.dark .bg-neutral-100, .dark .bg-gray-100 { background-color: #262626; }
+.dark .bg-neutral-200, .dark .bg-neutral-300 { background-color: #333; }
+.dark .text-black, .dark .text-neutral-950, .dark .text-neutral-900, .dark .text-neutral-800 { color: #ededed; }
+.dark .text-neutral-700, .dark .text-neutral-600, .dark .text-gray-600 { color: #c4c4c4; }
+.dark .text-neutral-500, .dark .text-neutral-400, .dark .text-gray-500 { color: #aaa; }
+.dark .border-neutral-200, .dark .border-neutral-300 { border-color: #383838; }
+.dark .hover\:bg-neutral-100:hover, .dark .hover\:bg-neutral-50:hover, .dark .hover\:bg-gray-100:hover { background-color: #262626; }
+.dark .hover\:text-neutral-900:hover { color: #fafafa; }
+.dark .project-article { color: #d0d0d0; }
+.dark .project-article h1, .dark .project-article h2, .dark .project-article h3, .dark .project-article a { color: #ededed; }
+.dark .project-article pre, .dark .project-article code { background: #262626; }
+.dark .project-visual figcaption, .dark .ideation-sketches figcaption { color: #aaa; }
+.dark .project-article .project-visual img, .dark .project-article .ideation-sketches img { border-color: #383838; }
+/* Logos and screenshots retain their actual colours in either theme. */
+.dark img.bg-white { background-color: white; }
+.dark a:focus-visible, .dark button:focus-visible { outline-color: #bdbdbd; }
+.site-content { scrollbar-color: #b9b9b9 transparent; }
+.dark .site-content { scrollbar-color: #555 transparent; }
+
+.image-preview-trigger { display: block; width: 100%; padding: 0; border: 0; background: none; text-align: inherit; cursor: zoom-in; }
+.image-preview-dialog { position: fixed; inset: 3dvh 3vw; z-index: 51; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: 12px; background: hsl(var(--background)); color: hsl(var(--foreground)); box-shadow: 0 20px 70px #0005; }
+.image-preview-stage { display: flex; min-width: 0; min-height: 0; align-items: center; justify-content: center; overflow: hidden; touch-action: none; background: hsl(var(--muted)); padding: 12px; }
+.image-preview-stage img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; user-select: none; transform-origin: center; }
+.preview-control { display: inline-flex; height: 36px; width: 36px; align-items: center; justify-content: center; border-radius: 6px; }
+.preview-control:hover { background: hsl(var(--accent)); }
+.preview-control:disabled { opacity: .3; cursor: default; }
+@media (max-width: 640px) {
+  .image-preview-dialog { inset: 1dvh 2vw; }
+  .preview-control { height: 40px; width: 34px; }
+}

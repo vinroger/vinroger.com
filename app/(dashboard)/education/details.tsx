@@ -69,7 +69,7 @@ function Details() {
                   alt={`${edu.institution} logo`}
                   layout="fill"
                   objectFit="contain"
-                  className="rounded-lg"
+                  className="rounded-lg bg-white p-1"
                 />
               </div>
             </div>

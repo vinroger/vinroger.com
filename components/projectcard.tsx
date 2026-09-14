@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -14,7 +15,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, imageSrc, link, category, className, noNewTab }: ProjectCardProps) {
   return (
-    <a href={link} target={noNewTab ? undefined : '_blank'} rel="noopener noreferrer"
+    <Link href={link} target={noNewTab ? undefined : '_blank'} rel="noopener noreferrer"
       className={cn('group flex h-full flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white transition-colors hover:border-neutral-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-800', className)}>
       <div className="relative aspect-[2/1] overflow-hidden bg-neutral-100">
         {imageSrc ? <Image src={imageSrc} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 280px" className="object-cover" /> :
@@ -28,6 +29,6 @@ export default function ProjectCard({ title, description, imageSrc, link, catego
         <h3 className="flex items-start justify-between gap-3 font-semibold text-base">{title}<ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-neutral-500" /></h3>
         <p className="mt-2 text-sm leading-relaxed text-neutral-600">{description}</p>
       </div>
-    </a>
+    </Link>
   );
 }
