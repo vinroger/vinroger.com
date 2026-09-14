@@ -1,0 +1,92 @@
+[
+  {
+    "image": "/projects/screenshots/uimagine-editor.jpg",
+    "caption": "Examples of generated interfaces from the UImagine launch.",
+    "source": "https://www.producthunt.com/products/uimagine-io"
+  },
+  {
+    "image": "/projects/screenshots/uimagine-select-edit.jpg",
+    "caption": "Selecting and editing a part of the generated interface.",
+    "source": "https://www.producthunt.com/products/uimagine-io"
+  },
+  {
+    "image": "/projects/screenshots/heroui-chat-editor.jpg",
+    "caption": "HeroUI Chat with a prompt conversation beside the generated interface.",
+    "source": "https://www.producthunt.com/products/heroui-chat?launch=heroui-chat"
+  },
+  {
+    "image": "/projects/screenshots/heroui-chat-workspace.jpg",
+    "caption": "Another interface example from the HeroUI Chat launch.",
+    "source": "https://www.producthunt.com/products/heroui-chat?launch=heroui-chat"
+  },
+  {
+    "image": "/projects/screenshots/onellm-2.png",
+    "caption": "Building conversation datasets in OneLLM.",
+    "source": "https://betalist.com/startups/onellm-co"
+  },
+  {
+    "image": "/projects/screenshots/onellm-4.png",
+    "caption": "Configuring a fine-tuning run without leaving the workspace.",
+    "source": "https://betalist.com/startups/onellm-co"
+  },
+  {
+    "image": "/projects/screenshots/onellm-5.png",
+    "caption": "Model evaluation and reports.",
+    "source": "https://betalist.com/startups/onellm-co"
+  },
+  {
+    "image": "/projects/screenshots/onellm-6.png",
+    "caption": "Recorded calls and model usage.",
+    "source": "https://betalist.com/startups/onellm-co"
+  },
+  {
+    "image": "/projects/screenshots/query-guided-search-results.png",
+    "caption": "Qwen32 comparison for one and 100 returned documents. Recall is measured against the exact binary ranking; time uses a logarithmic scale.",
+    "source": "/projects/query-guided-search/report.pdf"
+  },
+  {
+    "image": "/projects/screenshots/gitglimpse-retrieval.png",
+    "caption": "Combining BM25 and vector-search results, Figure 5 from the project report.",
+    "source": "/projects/gitglimpse-report.pdf"
+  },
+  {
+    "image": "/projects/screenshots/gitglimpse-answer.png",
+    "caption": "The iterative answer-generation workflow, Figure 8 from the project report.",
+    "source": "/projects/gitglimpse-report.pdf"
+  },
+  {
+    "image": "/projects/screenshots/quick-median-benchmark.png",
+    "caption": "Archived benchmark data, replotted using the same averaging as the published page. This is not a new benchmark run.",
+    "source": "https://vinroger.github.io/quick-median/"
+  },
+  {
+    "image": "/projects/screenshots/heroui-render-profile.png",
+    "caption": "Browser profiling of list rendering before virtualization.",
+    "source": "https://github.com/heroui-inc/heroui/pull/4094"
+  },
+  {
+    "image": "/projects/screenshots/heroui-search-profile.png",
+    "caption": "The matching operation inspected separately in the browser profiler.",
+    "source": "https://github.com/heroui-inc/heroui/pull/4094"
+  },
+  {
+    "image": "/showcase/adswift.png",
+    "caption": "An AdSwift project photograph at SUTD.",
+    "source": null
+  },
+  {
+    "image": "/projects/cassandra3.jpg",
+    "caption": "A replication illustration from the original project notes.",
+    "source": null
+  },
+  {
+    "image": "/projects/rtree2.png",
+    "caption": "Spatial grouping illustrated in the original project notes, alongside the nearby-search work.",
+    "source": null
+  },
+  {
+    "image": "/projects/guidinghand.png",
+    "caption": "The staff-facing dashboard in the project prototype.",
+    "source": "https://sites.google.com/view/team10-echolestia/home"
+  }
+]

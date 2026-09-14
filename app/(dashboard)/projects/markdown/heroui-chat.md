@@ -8,11 +8,21 @@ I helped build HeroUI Chat from prototype to production while working as a Softw
 
 [View the Product Hunt launch](https://www.producthunt.com/products/heroui-chat?launch=heroui-chat)
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/heroui-chat-editor.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open image: HeroUI Chat with a prompt conversation beside the generated interface."><img src="/projects/screenshots/heroui-chat-editor.jpg" alt="HeroUI Chat with a prompt conversation beside the generated interface." width="1600" height="958" loading="lazy" /></a>
+  <figcaption>HeroUI Chat with a prompt conversation beside the generated interface. <a href="https://www.producthunt.com/products/heroui-chat?launch=heroui-chat" target="_blank" rel="noopener noreferrer">Product Hunt</a>.</figcaption>
+</figure>
+
 ## From an idea to an interface
 
 HeroUI Chat lets people describe an interface or provide a screenshot, then work with the generated result. It uses the HeroUI component library and brings the design preview and editable code into the same workspace.
 
 For example, someone can describe a booking page, inspect the generated interface, and continue refining it. Developers can also edit the code directly through Dev Mode. The product is built around that continued editing process, rather than stopping after the first generation.
+
+<figure class="project-visual">
+  <a href="/projects/screenshots/heroui-chat-workspace.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open image: Another interface example from the HeroUI Chat launch."><img src="/projects/screenshots/heroui-chat-workspace.jpg" alt="Another interface example from the HeroUI Chat launch." width="1600" height="958" loading="lazy" /></a>
+  <figcaption>Another interface example from the HeroUI Chat launch. <a href="https://www.producthunt.com/products/heroui-chat?launch=heroui-chat" target="_blank" rel="noopener noreferrer">Product Hunt</a>.</figcaption>
+</figure>
 
 ## My contribution
 

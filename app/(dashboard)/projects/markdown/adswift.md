@@ -31,6 +31,11 @@ These measurements have different meanings. A detected Bluetooth device is not p
 
 For example, a time-series chart can show that detected activity rose around lunchtime. It cannot, on its own, establish how many people read the screen or whether the advertisement caused a purchase.
 
+<figure class="project-visual">
+  <a href="/showcase/adswift.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: An AdSwift project photograph at SUTD."><img src="/showcase/adswift.png" alt="An AdSwift project photograph at SUTD." width="1280" height="960" loading="lazy" /></a>
+  <figcaption>An AdSwift project photograph at SUTD.</figcaption>
+</figure>
+
 ## My role
 
 I worked with the team on the advertisement delivery product, technical development and early discussions with advertisers and drivers. That meant connecting the display software and analytics to a practical pilot, rather than treating the dashboard as the entire product.

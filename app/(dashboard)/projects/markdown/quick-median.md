@@ -21,3 +21,8 @@ For an even-length array, the median is the average of the two central values. F
 The project includes the package and a benchmark page for comparing median implementations. This gave me a small, concrete way to study the difference between an algorithm’s expected complexity and its actual running time in JavaScript.
 
 The useful comparison is not just the name of the algorithm. Array size, input order, allocations and the runtime all affect the result. The linked benchmark page contains the comparisons and its reference for the selection algorithm, rather than treating a historical speedup as a promise for every input.
+
+<figure class="project-visual">
+  <a href="/projects/screenshots/quick-median-benchmark.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Archived benchmark data, replotted using the same averaging as the published page. This is not a new benchmark run."><img src="/projects/screenshots/quick-median-benchmark.png" alt="Archived benchmark data, replotted using the same averaging as the published page. This is not a new benchmark run." width="1618" height="1011" loading="lazy" /></a>
+  <figcaption>Archived benchmark data, replotted using the same averaging as the published page. This is not a new benchmark run. <a href="https://vinroger.github.io/quick-median/" target="_blank" rel="noopener noreferrer">Benchmark page</a>.</figcaption>
+</figure>

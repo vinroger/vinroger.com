@@ -58,6 +58,11 @@ The timer begins with an already computed query embedding. It includes cluster s
 
 Recall is measured against an exact scan of the same binary representation. For example, with one result per query, 99% recall means recovering the exact binary top result for 99% of the queries. It does not mean 99% agreement with human relevance judgments.
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/query-guided-search-results.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Qwen32 comparison for one and 100 returned documents. Recall is measured against the exact binary ranking; time uses a logarithmic scale."><img src="/projects/screenshots/query-guided-search-results.png" alt="Qwen32 comparison for one and 100 returned documents. Recall is measured against the exact binary ranking; time uses a logarithmic scale." width="1584" height="684" loading="lazy" /></a>
+  <figcaption>Qwen32 comparison for one and 100 returned documents. Recall is measured against the exact binary ranking; time uses a logarithmic scale. <a href="/projects/query-guided-search/report.pdf" target="_blank" rel="noopener noreferrer">Report</a>.</figcaption>
+</figure>
+
 ## What the report shows
 
 Bitplanes have their clearest benefit when the requested result count is small. Strong results allow more branches to be skipped. When more results are required, more branches remain possible candidates and the bitmap work becomes harder to justify.

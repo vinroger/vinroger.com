@@ -25,6 +25,11 @@ Replication keeps copies of a value on more than one node. A quorum setting dete
 
 ![Node communication in TunaDB](/projects/cassandra4.png)
 
+<figure class="project-visual">
+  <a href="/projects/cassandra3.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open image: A replication illustration from the original project notes."><img src="/projects/cassandra3.jpg" alt="A replication illustration from the original project notes." width="548" height="297" loading="lazy" /></a>
+  <figcaption>A replication illustration from the original project notes.</figcaption>
+</figure>
+
 ## What I worked on
 
 My work covered the backend and the connection between partition placement, replication and local storage. The project made it possible to inspect these operations together: where a key goes, how nodes exchange information, and where a value lives before and after it reaches disk.

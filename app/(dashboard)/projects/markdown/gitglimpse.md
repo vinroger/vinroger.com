@@ -18,6 +18,11 @@ The retrieval pipeline combines BM25 keyword search with embedding search. BM25 
 
 The next step reranks the candidates using a cross-encoder, a model that considers the query and document together. This is more work per candidate, so it is applied after retrieval has narrowed the set.
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/gitglimpse-retrieval.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Combining BM25 and vector-search results, Figure 5 from the project report."><img src="/projects/screenshots/gitglimpse-retrieval.png" alt="Combining BM25 and vector-search results, Figure 5 from the project report." width="1439" height="770" loading="lazy" /></a>
+  <figcaption>Combining BM25 and vector-search results, Figure 5 from the project report. <a href="/projects/gitglimpse-report.pdf" target="_blank" rel="noopener noreferrer">Report</a>.</figcaption>
+</figure>
+
 ## Improving the input to search
 
 We compared ways of representing a pull request as searchable text, as well as query-expansion strategies and embedding models. For example, expanding a short question can provide useful context, but adding unrelated terms can also pull the search toward the wrong documents.
@@ -29,6 +34,11 @@ The experiments look at these choices separately instead of attributing every ch
 The project also explores an Incremental Chain-of-Thought loop. A model retrieves context, drafts an answer, and uses a judging step to decide whether another retrieval cycle is needed. The final answer includes references to the pull requests that support it.
 
 For example, a first search might find a discussion of a component bug. A follow-up search can look for the change that resolved it. The question is whether that extra cycle contributes useful evidence, rather than merely generating more text.
+
+<figure class="project-visual">
+  <a href="/projects/screenshots/gitglimpse-answer.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: The iterative answer-generation workflow, Figure 8 from the project report."><img src="/projects/screenshots/gitglimpse-answer.png" alt="The iterative answer-generation workflow, Figure 8 from the project report." width="1439" height="786" loading="lazy" /></a>
+  <figcaption>The iterative answer-generation workflow, Figure 8 from the project report. <a href="/projects/gitglimpse-report.pdf" target="_blank" rel="noopener noreferrer">Report</a>.</figcaption>
+</figure>
 
 ## Evaluation
 

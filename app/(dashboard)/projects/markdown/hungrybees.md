@@ -29,6 +29,11 @@ WebSockets supported the live chat, while Firebase Cloud Messaging delivered not
 
 For example, someone can receive a notification about a group order, open the app, and then continue the discussion in chat.
 
+<figure class="project-visual">
+  <a href="/projects/rtree2.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Spatial grouping illustrated in the original project notes, alongside the nearby-search work."><img src="/projects/rtree2.png" alt="Spatial grouping illustrated in the original project notes, alongside the nearby-search work." width="300" height="300" loading="lazy" /></a>
+  <figcaption>Spatial grouping illustrated in the original project notes, alongside the nearby-search work.</figcaption>
+</figure>
+
 ## The outcome
 
 The team received the Singtel and SUTD Best Project Award and the SUTD Computer Science Award in 2023. The photograph below is from the team’s award presentation.

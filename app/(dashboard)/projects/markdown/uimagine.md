@@ -9,11 +9,21 @@ UImagine grew out of a workflow I kept repeating: think through an interface, fi
 
 [View UImagine on Product Hunt](https://www.producthunt.com/products/uimagine-io)
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/uimagine-editor.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open image: Examples of generated interfaces from the UImagine launch."><img src="/projects/screenshots/uimagine-editor.jpg" alt="Examples of generated interfaces from the UImagine launch." width="1600" height="900" loading="lazy" /></a>
+  <figcaption>Examples of generated interfaces from the UImagine launch. <a href="https://www.producthunt.com/products/uimagine-io" target="_blank" rel="noopener noreferrer">Product Hunt</a>.</figcaption>
+</figure>
+
 ## What it does
 
 A user can describe a page or provide a screenshot. UImagine generates the interface and shows a preview alongside the code. From there, the user can select a specific part of the page and ask for a change.
 
 For example, after generating a hotel booking page, the next request might be to change the search form or replace one card. That is a different problem from generating the whole page again: the editor needs to identify the selected element and preserve the surrounding work.
+
+<figure class="project-visual">
+  <a href="/projects/screenshots/uimagine-select-edit.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open image: Selecting and editing a part of the generated interface."><img src="/projects/screenshots/uimagine-select-edit.jpg" alt="Selecting and editing a part of the generated interface." width="1600" height="900" loading="lazy" /></a>
+  <figcaption>Selecting and editing a part of the generated interface. <a href="https://www.producthunt.com/products/uimagine-io" target="_blank" rel="noopener noreferrer">Product Hunt</a>.</figcaption>
+</figure>
 
 ## What I built
 

@@ -9,6 +9,11 @@ The Guiding Hand was a student team project for Gebirah, presented by Team Echol
 
 [Full team presentation](https://sites.google.com/view/team10-echolestia/home) · [Project video](https://www.youtube.com/watch?v=y1QmRHpY6l4)
 
+<figure class="project-visual">
+  <a href="/projects/guidinghand.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: The staff-facing dashboard in the project prototype."><img src="/projects/guidinghand.png" alt="The staff-facing dashboard in the project prototype." width="1920" height="1080" loading="lazy" /></a>
+  <figcaption>The staff-facing dashboard in the project prototype. <a href="https://sites.google.com/view/team10-echolestia/home" target="_blank" rel="noopener noreferrer">Team presentation</a>.</figcaption>
+</figure>
+
 ## Two sides of the same conversation
 
 The client application brought together articles, counsellor messaging and an AI chatbot. The admin application supported conversations, article management and summaries that could help staff review a case.

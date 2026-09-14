@@ -9,17 +9,40 @@ OneLLM is a personal product for building datasets, fine-tuning language models 
 
 [View OneLLM on BetaList](https://betalist.com/startups/onellm-co)
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/onellm-2.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Building conversation datasets in OneLLM."><img src="/projects/screenshots/onellm-2.png" alt="Building conversation datasets in OneLLM." width="1067" height="600" loading="lazy" /></a>
+  <figcaption>Building conversation datasets in OneLLM. <a href="https://betalist.com/startups/onellm-co" target="_blank" rel="noopener noreferrer">BetaList</a>.</figcaption>
+</figure>
+
 ## A connected workflow
 
 Fine-tuning starts before a training job. We need examples of the inputs a model will receive and the responses we want it to produce. Those examples need to be collected, edited and reviewed.
 
 OneLLM brought these steps together. The dataset editor supported conversation records with user and assistant messages, including keyboard shortcuts for working through many examples. Users could prepare the dataset, start fine-tuning and evaluate the resulting model without writing a separate integration for each step.
 
+<figure class="project-visual">
+  <a href="/projects/screenshots/onellm-4.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Configuring a fine-tuning run without leaving the workspace."><img src="/projects/screenshots/onellm-4.png" alt="Configuring a fine-tuning run without leaving the workspace." width="1067" height="600" loading="lazy" /></a>
+  <figcaption>Configuring a fine-tuning run without leaving the workspace. <a href="https://betalist.com/startups/onellm-co" target="_blank" rel="noopener noreferrer">BetaList</a>.</figcaption>
+</figure>
+
 ## From API logs to training examples
 
 I also built a way to record model API calls and import those logs into datasets. For example, an interaction that produced an unhelpful answer could become an example to review and rewrite for a later training run.
 
 A dashboard displayed usage and cost trends from the recorded calls. This connected the product’s day-to-day model use with the examples used to improve it.
+
+<div class="project-visual-pair">
+<figure class="project-visual">
+  <a href="/projects/screenshots/onellm-5.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Model evaluation and reports."><img src="/projects/screenshots/onellm-5.png" alt="Model evaluation and reports." width="1067" height="600" loading="lazy" /></a>
+  <figcaption>Model evaluation and reports. <a href="https://betalist.com/startups/onellm-co" target="_blank" rel="noopener noreferrer">BetaList</a>.</figcaption>
+</figure>
+
+<figure class="project-visual">
+  <a href="/projects/screenshots/onellm-6.png" target="_blank" rel="noopener noreferrer" aria-label="Open image: Recorded calls and model usage."><img src="/projects/screenshots/onellm-6.png" alt="Recorded calls and model usage." width="1067" height="600" loading="lazy" /></a>
+  <figcaption>Recorded calls and model usage. <a href="https://betalist.com/startups/onellm-co" target="_blank" rel="noopener noreferrer">BetaList</a>.</figcaption>
+</figure>
+
+</div>
 
 ## My contribution
 
