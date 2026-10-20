@@ -1,7 +1,7 @@
 // Shared summaries keep the home page and project list in sync.
 // A hidden project keeps its page and report URL but is left out of every list.
 export const projects = [
-  { slug: 'openverdict', title: 'OpenVerdict', category: 'Research', description: 'A 4B decision model that answers in one forward pass or after a chain-of-thought of about 50 tokens.', image: '/projects/openverdict/accuracy_vs_cot_length.png', date: 'Sep 2026 – Oct 2026', featured: true },
+  { slug: 'openverdict-home', title: 'OpenVerdict', category: 'Research', description: 'A 4B decision model that answers in one forward pass or after a chain-of-thought of about 50 tokens.', image: '/projects/openverdict/accuracy_vs_cot_length.png', date: 'Sep 2026 – Oct 2026', featured: true },
   { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '/projects/covers/query-guided-search.svg', date: 'Sep 2026', featured: true, hidden: true },
   { slug: 'heroui-chat', title: 'HeroUI Chat', category: 'Built at HeroUI', description: 'An AI interface builder I helped take from an early prototype to production at HeroUI.', image: '/projects/covers/heroui-chat.svg', date: 'Nov 2024 – Jun 2025', featured: true },
   { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/uimagine.png', date: 'Oct 2023 – Apr 2025', featured: true },
