@@ -1,5 +1,5 @@
 import ProjectCard from '@/components/projectcard';
-import { projects } from '@/lib/portfolio';
+import { listedProjects } from '@/lib/portfolio';
 
 export default function ProjectsPage() {
   const categories = ['Research', 'Built at HeroUI', 'Personal products', 'Open source', 'University projects'];
@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     {categories.map(category => <section key={category} id={category.toLowerCase().replaceAll(' ', '-')} className="scroll-mt-8 mt-9">
       <h2 className="mb-4 border-b border-neutral-200 pb-3 text-xl font-semibold">{category}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {projects.filter(project => project.category === category).map(project => <ProjectCard key={project.slug} title={project.title} description={project.description} imageSrc={project.image} category={project.category} link={'/projects/'+project.slug} noNewTab />)}
+        {listedProjects.filter(project => project.category === category).map(project => <ProjectCard key={project.slug} title={project.title} description={project.description} imageSrc={project.image} category={project.category} date={project.date} link={'/projects/'+project.slug} noNewTab />)}
       </div>
     </section>)}
   </div>;

@@ -8,6 +8,7 @@ import { ArrowLeft, Download, ExternalLink } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ImagePreviewProvider, PreviewImage } from '@/components/image-preview';
+import { projects } from '@/lib/portfolio';
 
 const directory = path.join(process.cwd(), 'app/(dashboard)/projects/markdown');
 
@@ -25,8 +26,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { data, content } = readProject(params.slug);
+  const date = projects.find(project => project.slug === params.slug)?.date;
   return <article className="mx-auto max-w-[850px] px-5 pb-28 pt-12 md:px-8 md:pt-20">
-    <a href="/projects" className="mb-7 inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900"><ArrowLeft className="h-4 w-4" />All projects</a>
+    <div className="mb-7 flex items-center justify-between gap-4 text-sm text-neutral-500">
+      <a href="/projects" className="inline-flex items-center gap-2 hover:text-neutral-900"><ArrowLeft className="h-4 w-4" />All projects</a>
+      {date && <span>{date}</span>}
+    </div>
     <ImagePreviewProvider>
     {data.image && <PreviewImage src={data.image} alt={`${data.title} project`} className="mb-8 max-h-[420px] w-full rounded-xl border border-neutral-200 object-contain bg-neutral-50" />}
     <div className="project-article">

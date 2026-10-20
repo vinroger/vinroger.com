@@ -1,17 +1,20 @@
 // Shared summaries keep the home page and project list in sync.
+// A hidden project keeps its page and report URL but is left out of every list.
 export const projects = [
-  { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '/projects/covers/query-guided-search.svg', featured: true },
-  { slug: 'heroui-chat', title: 'HeroUI Chat', category: 'Built at HeroUI', description: 'An AI interface builder I helped take from an early prototype to production at HeroUI.', image: '/projects/covers/heroui-chat.svg', featured: true },
-  { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/uimagine.png', featured: true },
-  { slug: 'onellm', title: 'OneLLM', category: 'Personal products', description: 'Build training datasets, fine-tune language models and evaluate them in one browser workspace.', image: '/onellm.png', featured: false },
-  { slug: 'adswift', title: 'AdSwift', category: 'Personal products', description: 'An outdoor advertising project connecting digital displays, content management and audience measurement.', image: '/projects/adswift.png', featured: false },
-  { slug: 'gitglimpse', title: 'GitGlimpse', category: 'Research', description: 'Search pull requests by meaning and keywords, then build answers with links back to the source.', image: '/projects/gitglimpse.png', featured: true },
-  { slug: 'quick-median', title: 'Quick Median', category: 'Open source', description: 'A small JavaScript package that finds a median without sorting the entire array.', image: '/projects/covers/quick-median.svg', featured: false },
-  { slug: 'heroui-contributions', title: 'HeroUI contributions', category: 'Open source', description: 'Making large Select, Autocomplete and Listbox components more responsive through virtualization.', image: '/projects/covers/heroui-contributions.svg', featured: false },
-  { slug: 'cassandra', title: 'TunaDB', category: 'University projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/cassandra.png', featured: false },
-  { slug: 'hungrybees', title: 'Hungrybees', category: 'University projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/hungrybees.png', featured: false },
-  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'University projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/guidinghand2.png', featured: false },
+  { slug: 'query-guided-search', title: 'Query-guided Search', category: 'Research', description: 'Can a query’s ideal bit pattern help us search faster? Three methods, mathematical costs and measured results.', image: '/projects/covers/query-guided-search.svg', date: 'Sep 2026', featured: true, hidden: true },
+  { slug: 'heroui-chat', title: 'HeroUI Chat', category: 'Built at HeroUI', description: 'An AI interface builder I helped take from an early prototype to production at HeroUI.', image: '/projects/covers/heroui-chat.svg', date: 'Nov 2024 – Jun 2025', featured: true },
+  { slug: 'uimagine', title: 'UImagine', category: 'Personal products', description: 'Turn a description or screenshot into an interface, then edit the result visually.', image: '/uimagine.png', date: 'Oct 2023 – Apr 2025', featured: true },
+  { slug: 'onellm', title: 'OneLLM', category: 'Personal products', description: 'Build training datasets, fine-tune language models and evaluate them in one browser workspace.', image: '/onellm.png', date: 'Feb 2024', featured: false },
+  { slug: 'adswift', title: 'AdSwift', category: 'Personal products', description: 'An outdoor advertising project connecting digital displays, content management and audience measurement.', image: '/projects/adswift.png', date: 'Jan 2022 – Jan 2023', featured: false },
+  { slug: 'gitglimpse', title: 'GitGlimpse', category: 'Research', description: 'Search pull requests by meaning and keywords, then build answers with links back to the source.', image: '/projects/gitglimpse.png', date: 'Sep 2024 – Dec 2024', featured: true },
+  { slug: 'quick-median', title: 'Quick Median', category: 'Open source', description: 'A small JavaScript package that finds a median without sorting the entire array.', image: '/projects/covers/quick-median.svg', date: 'Aug 2024', featured: false },
+  { slug: 'heroui-contributions', title: 'HeroUI contributions', category: 'Open source', description: 'Making large Select, Autocomplete and Listbox components more responsive through virtualization.', image: '/projects/covers/heroui-contributions.svg', date: 'Nov 2024 – Dec 2024', featured: false },
+  { slug: 'cassandra', title: 'TunaDB', category: 'University projects', description: 'A Cassandra-inspired database in Go, exploring partitioning, replication and storage.', image: '/projects/cassandra.png', date: 'Oct 2024 – Dec 2024', featured: false },
+  { slug: 'hungrybees', title: 'Hungrybees', category: 'University projects', description: 'Find nearby group food orders, coordinate in chat and share delivery costs.', image: '/projects/hungrybees.png', date: 'Jan 2023 – Apr 2023', featured: false },
+  { slug: 'the-guiding-hand', title: 'The Guiding Hand', category: 'University projects', description: 'A client and counsellor portal built for Gebirah, with the team’s full project presentation.', image: '/projects/guidinghand2.png', date: 'May 2023 – Aug 2023', featured: false },
 ];
+
+export const listedProjects = projects.filter(project => !project.hidden);
 
 export const experience = [
   { company: 'TikTok', period: 'June 2025 to present', type: 'Full time', location: 'Singapore', description: 'Responsible for developing and maintaining product features in TikTok Search.' },
